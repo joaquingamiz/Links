@@ -7,7 +7,11 @@
 }
 
 /* Reset */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   background: var(--bg);
@@ -15,16 +19,17 @@ body {
   font-family: var(--font);
 }
 
-/* ESTE es el contenedor que centra TODO */
 .site-container {
   max-width: 480px;
-  margin: 0 auto;      /* CENTRADO horizontal */
+  margin: 0 auto;
   padding: 2rem 1rem;
-  text-align: center;  /* Todo lo interior va centrado */
+  text-align: center;
 }
 
 /* Header */
-.header { margin-bottom: 2rem; }
+.header {
+  margin-bottom: 1.5rem;
+}
 .logo {
   width: 100px;
   margin: 0 auto;
@@ -36,14 +41,19 @@ body {
   margin-top: 0.5rem;
 }
 
-/* Curso destacado */
-.course {
+/* Hero / Curso */
+.hero {
   margin-bottom: 2rem;
 }
-.course h2 {
-  font-size: 1.25rem;
+.hero h2 {
+  font-size: 1.4rem;
   font-weight: 600;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+.hero-desc {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #ccc;
 }
 
 /* Botones base */
@@ -65,7 +75,18 @@ body {
   transform: translateY(-2px);
 }
 
-/* Botón de acento (curso) */
+/* Botones sólidos */
+.btn-solid {
+  background: var(--gray);
+  border-color: var(--gray);
+}
+.btn-solid:hover {
+  background: var(--fg);
+  color: var(--bg);
+  border-color: var(--fg);
+}
+
+/* Botón de acento */
 .btn-accent {
   border-color: var(--accent);
   color: var(--accent);
@@ -75,26 +96,22 @@ body {
   color: var(--bg);
 }
 
-/* Sección Contenido Principal */
-.main-content { margin-bottom: 2rem; }
+/* Contenido Principal */
+.main-content {
+  margin-bottom: 2rem;
+}
 .main-content h2 {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 1rem;
 }
-
-/* Lista vertical centrada */
 .links-list {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  align-items: center; /* IMPORTANTE para centrar cada .link-item */
 }
-
-/* Cada “tarjeta” de enlace */
 .link-item {
   background: var(--gray);
-  width: 100%;
   padding: 1rem;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.5);
@@ -114,13 +131,9 @@ body {
 /* Newsletter */
 .newsletter-section {
   margin-bottom: 2rem;
-  background: var(--gray);
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
 .newsletter-section h2 {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
@@ -132,13 +145,35 @@ body {
 .newsletter-embed {
   width: 100%;
   max-width: 360px;
-  margin: 0 auto;
+  margin: 0 auto 1rem;
 }
 .newsletter-embed iframe {
   width: 100%;
-  height: 320px; /* mismo que el inline-style */
+  height: 320px;
   border-radius: 8px;
 }
 
-/* Secundaria */
-.secondary { margin-bottom: 1rem; }
+/* Redes Secundarias */
+.social {
+  margin-bottom: 2rem;
+}
+.social h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Footer */
+.footer {
+  font-size: 0.8rem;
+  color: #666;
+  opacity: 0.8;
+}
+.footer p {
+  margin-top: 1rem;
+}
