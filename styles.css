@@ -1,37 +1,30 @@
-/* Importada Poppins desde Google Fonts */
-
-/* Reset y variables */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 :root {
   --bg: #000;
   --fg: #fff;
   --gray: #111;
-  --accent: #E63946; /* Ajusta aquí tu color de marca */
+  --accent: #E63946;
   --font: 'Poppins', sans-serif;
 }
+
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
   background: var(--bg);
   color: var(--fg);
   font-family: var(--font);
-  line-height: 1.5;
 }
 
-.container {
+/* ESTE es el contenedor que centra TODO */
+.site-container {
   max-width: 480px;
-  margin: 0 auto;
+  margin: 0 auto;      /* CENTRADO horizontal */
   padding: 2rem 1rem;
-  text-align: center;
+  text-align: center;  /* Todo lo interior va centrado */
 }
 
 /* Header */
-.header {
-  margin-bottom: 2rem;
-}
+.header { margin-bottom: 2rem; }
 .logo {
   width: 100px;
   margin: 0 auto;
@@ -43,7 +36,7 @@ body {
   margin-top: 0.5rem;
 }
 
-/* Sección Curso */
+/* Curso destacado */
 .course {
   margin-bottom: 2rem;
 }
@@ -52,6 +45,8 @@ body {
   font-weight: 600;
   margin-bottom: 0.75rem;
 }
+
+/* Botones base */
 .btn {
   display: block;
   width: 100%;
@@ -64,11 +59,13 @@ body {
   border: 2px solid var(--fg);
   border-radius: 8px;
   transition: background 0.3s, color 0.3s, transform 0.2s;
-  margin: 0.5rem auto;
+  margin: 0.5rem 0;
 }
 .btn:hover {
   transform: translateY(-2px);
 }
+
+/* Botón de acento (curso) */
 .btn-accent {
   border-color: var(--accent);
   color: var(--accent);
@@ -78,25 +75,28 @@ body {
   color: var(--bg);
 }
 
-/* Contenido Principal */
-.main-content {
-  margin-bottom: 2rem;
-}
+/* Sección Contenido Principal */
+.main-content { margin-bottom: 2rem; }
 .main-content h2 {
   font-size: 1.25rem;
-  margin-bottom: 1rem;
   font-weight: 600;
+  margin-bottom: 1rem;
 }
+
+/* Lista vertical centrada */
 .links-list {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  align-items: center; /* IMPORTANTE para centrar cada .link-item */
 }
+
+/* Cada “tarjeta” de enlace */
 .link-item {
   background: var(--gray);
+  width: 100%;
   padding: 1rem;
   border-radius: 10px;
-  text-align: center;
   box-shadow: 0 4px 12px rgba(0,0,0,0.5);
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -129,8 +129,11 @@ body {
   margin-bottom: 1rem;
   color: #ccc;
 }
+.newsletter-embed {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+}
 
 /* Secundaria */
-.secondary {
-  margin-bottom: 1rem;
-}
+.secondary { margin-bottom: 1rem; }
