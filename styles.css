@@ -131,8 +131,13 @@ body {
 }
 .newsletter-embed {
   width: 100%;
-  max-width: 320px;
+  max-width: 360px;
   margin: 0 auto;
+}
+.newsletter-embed iframe {
+  width: 100%;
+  height: 320px; /* mismo que el inline-style */
+  border-radius: 8px;
 }
 
 /* Secundaria */
