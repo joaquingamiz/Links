@@ -1,129 +1,136 @@
-/* Reset básico */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+/* Importada Poppins desde Google Fonts */
 
-body {
-  background: #000;
-  color: #fff;
-  font-family: Arial, sans-serif;
-  text-align: center;
-  padding: 2rem 1rem;
+/* Reset y variables */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --bg: #000;
+  --fg: #fff;
+  --gray: #111;
+  --accent: #E63946; /* Ajusta aquí tu color de marca */
+  --font: 'Poppins', sans-serif;
 }
 
-/* Header con logo y subtítulo */
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font);
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+/* Header */
 .header {
   margin-bottom: 2rem;
 }
 .logo {
-  width: 120px;
-  display: block;
+  width: 100px;
   margin: 0 auto;
+  display: block;
 }
 .subtitle {
-  margin-top: 0.5rem;
-  font-size: 1.2rem;
   font-weight: 300;
+  font-size: 1rem;
+  margin-top: 0.5rem;
 }
 
-/* Curso destacado */
+/* Sección Curso */
 .course {
   margin-bottom: 2rem;
 }
 .course h2 {
-  font-size: 1.4rem;
-  margin-bottom: 0.8rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
 }
-.course-btn {
-  padding: 1.2rem;
+.btn {
+  display: block;
+  width: 100%;
+  padding: 1rem;
   font-size: 1.1rem;
-  border: 2px solid #E63946;
-  color: #E63946;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--fg);
+  background: transparent;
+  border: 2px solid var(--fg);
+  border-radius: 8px;
   transition: background 0.3s, color 0.3s, transform 0.2s;
+  margin: 0.5rem auto;
 }
-.course-btn:hover {
-  background: #E63946;
-  color: #000;
+.btn:hover {
   transform: translateY(-2px);
 }
-
-/* GRID responsivo para las tarjetas */
-.links-grid {
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  margin: 0 auto 2rem;
-  max-width: 800px;
+.btn-accent {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.btn-accent:hover {
+  background: var(--accent);
+  color: var(--bg);
 }
 
-/* Cada tarjeta */
-.link-card {
-  background: #111;
-  padding: 1.4rem;
+/* Contenido Principal */
+.main-content {
+  margin-bottom: 2rem;
+}
+.main-content h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.link-item {
+  background: var(--gray);
+  padding: 1rem;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
   transition: transform 0.3s, box-shadow 0.3s;
 }
-.link-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+.link-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.7);
 }
-
-/* Botones dentro de las tarjetas */
-.link-card .btn {
-  width: 100%;
-  padding: 1.2rem;
-  font-size: 1.2rem;
-  border-radius: 6px;
-  border: 2px solid #fff;
-  transition: background 0.3s, color 0.3s;
-}
-.link-card .btn:hover {
-  background: #fff;
-  color: #000;
-}
-
-/* Descripción debajo del botón */
 .link-desc {
-  margin-top: 0.8rem;
-  font-size: 0.95rem;
-  line-height: 1.4;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
   color: #ddd;
   opacity: 0.9;
 }
 
-/* Sección Newsletter */
+/* Newsletter */
 .newsletter-section {
-  margin: 2rem auto;
-  max-width: 600px;
-  background: #111;
+  margin-bottom: 2rem;
+  background: var(--gray);
   padding: 1.5rem;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
 .newsletter-section h2 {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
+  font-weight: 600;
   margin-bottom: 0.5rem;
 }
 .newsletter-desc {
   font-size: 1rem;
-  margin: 0.5rem 0 1rem;
+  margin-bottom: 1rem;
   color: #ccc;
-  opacity: 0.9;
-  line-height: 1.4;
-}
-.newsletter-embed {
-  width: 100%;
 }
 
-/* Enlaces secundarios */
-.links-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-.links-container .btn {
-  max-width: 500px;
-  padding: 1.2rem;
-  font-size: 1.2rem;
+/* Secundaria */
+.secondary {
+  margin-bottom: 1rem;
 }
