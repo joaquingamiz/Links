@@ -1,4 +1,4 @@
-/* Reset simple */
+/* Reset básico */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
@@ -6,57 +6,124 @@ body {
   color: #fff;
   font-family: Arial, sans-serif;
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 1rem;
 }
 
+/* Header con logo y subtítulo */
 .header {
   margin-bottom: 2rem;
 }
-
 .logo {
   width: 120px;
-  margin: 0 auto;
   display: block;
+  margin: 0 auto;
 }
-
 .subtitle {
   margin-top: 0.5rem;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 300;
 }
 
+/* Curso destacado */
+.course {
+  margin-bottom: 2rem;
+}
+.course h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+}
+.course-btn {
+  padding: 1.2rem;
+  font-size: 1.1rem;
+  border: 2px solid #E63946;
+  color: #E63946;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+.course-btn:hover {
+  background: #E63946;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+/* GRID responsivo para las tarjetas */
+.links-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin: 0 auto 2rem;
+  max-width: 800px;
+}
+
+/* Cada tarjeta */
+.link-card {
+  background: #111;
+  padding: 1.4rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.link-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Botones dentro de las tarjetas */
+.link-card .btn {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  border: 2px solid #fff;
+  transition: background 0.3s, color 0.3s;
+}
+.link-card .btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* Descripción debajo del botón */
+.link-desc {
+  margin-top: 0.8rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #ddd;
+  opacity: 0.9;
+}
+
+/* Sección Newsletter */
+.newsletter-section {
+  margin: 2rem auto;
+  max-width: 600px;
+  background: #111;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+.newsletter-section h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+.newsletter-desc {
+  font-size: 1rem;
+  margin: 0.5rem 0 1rem;
+  color: #ccc;
+  opacity: 0.9;
+  line-height: 1.4;
+}
+.newsletter-embed {
+  width: 100%;
+}
+
+/* Enlaces secundarios */
 .links-container {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   align-items: center;
-  max-width: 400px;
-  margin: 0 auto;
+  margin-bottom: 2rem;
 }
-
-.btn {
-  display: block;
-  width: 100%;
-  max-width: 300px;
-  padding: 0.8rem;
-  background: transparent;
-  border: 2px solid #fff;      /* blanco sobre negro */
-  border-radius: 8px;
-  color: #fff;
-  font-size: 1rem;
-  text-decoration: none;
-  transition: background 0.3s, color 0.3s, transform 0.2s;
-}
-
-.btn:hover {
-  background: #fff;
-  color: #000;
-  transform: translateY(-2px);
-}
-
-/* Estilo para el embed de newsletter */
-.newsletter-embed {
-  width: 100%;
-  max-width: 300px;
-  margin: 1rem auto;
+.links-container .btn {
+  max-width: 500px;
+  padding: 1.2rem;
+  font-size: 1.2rem;
 }
