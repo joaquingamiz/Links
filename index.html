@@ -9,16 +9,18 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- CONTENEDOR CENTRAL -->
   <div class="site-container">
-    
+
+    <!-- 1. Header -->
     <header class="header">
       <img src="logo.png" alt="Logo JG" class="logo">
       <h1 class="subtitle">Cloud Security Engineer | Creador de contenido</h1>
     </header>
 
-    <section class="course">
+    <!-- 2. Hero / Curso AZ‑900 -->
+    <section class="hero">
       <h2>Aprende del Cloud desde 0 (AZ‑900)</h2>
+      <p class="hero-desc">Empieza hoy y domina los fundamentos de Microsoft Azure.</p>
       <a class="btn btn-accent"
          href="https://www.udemy.com/course/az-900-fundamentos-de-microsoft-azure-para-principiantes/?referralCode=772F542AD3AF223DF091"
          target="_blank" rel="noopener">
@@ -26,60 +28,87 @@
       </a>
     </section>
 
+    <!-- 3. Contenido Principal -->
     <section class="main-content">
       <h2>Contenido Principal</h2>
       <div class="links-list">
+
         <!-- LinkedIn -->
         <div class="link-item">
-          <a class="btn" href="https://www.linkedin.com/in/joaquin-gamiz/" target="_blank" rel="noopener">
+          <a class="btn btn-solid" href="https://www.linkedin.com/in/joaquin-gamiz/" target="_blank" rel="noopener">
             LinkedIn
           </a>
           <p class="link-desc">Publicaciones diarias sobre Ciberseguridad, Cloud y IA</p>
         </div>
-        <!-- YouTube -->
+
+        <!-- Blog (después de LinkedIn) -->
         <div class="link-item">
-          <a class="btn" href="https://www.youtube.com/@joaquin_gamiz" target="_blank" rel="noopener">
-            YouTube
-          </a>
-          <p class="link-desc">Tutoriales sobre Microsoft Azure y mi experiencia en ciberseguridad</p>
-        </div>
-        <!-- Instagram -->
-        <div class="link-item">
-          <a class="btn" href="https://www.instagram.com/joaquin_gamiz/" target="_blank" rel="noopener">
-            Instagram
-          </a>
-          <p class="link-desc">Reels sobre ciberseguridad, Cloud e IA</p>
-        </div>
-        <!-- TikTok -->
-        <div class="link-item">
-          <a class="btn" href="https://www.tiktok.com/@joaquin_gamiz" target="_blank" rel="noopener">
-            TikTok
-          </a>
-          <p class="link-desc">Consejos rápidos y trucos sobre Cloud</p>
-        </div>
-        <!-- Blog -->
-        <div class="link-item">
-          <a class="btn" href="https://joaquingamiz.substack.com/" target="_blank" rel="noopener">
+          <a class="btn btn-solid" href="https://joaquingamiz.substack.com/" target="_blank" rel="noopener">
             Blog
           </a>
           <p class="link-desc">Artículos detallados contando mi experiencia</p>
         </div>
+
+        <!-- YouTube -->
+        <div class="link-item">
+          <a class="btn btn-solid" href="https://www.youtube.com/@joaquin_gamiz" target="_blank" rel="noopener">
+            YouTube
+          </a>
+          <p class="link-desc">Tutoriales sobre Microsoft Azure y mi experiencia en ciberseguridad</p>
+        </div>
+
+        <!-- Instagram -->
+        <div class="link-item">
+          <a class="btn btn-solid" href="https://www.instagram.com/joaquin_gamiz/" target="_blank" rel="noopener">
+            Instagram
+          </a>
+          <p class="link-desc">Reels sobre ciberseguridad, Cloud e IA</p>
+        </div>
+
+        <!-- TikTok -->
+        <div class="link-item">
+          <a class="btn btn-solid" href="https://www.tiktok.com/@joaquin_gamiz" target="_blank" rel="noopener">
+            TikTok
+          </a>
+          <p class="link-desc">Consejos rápidos y trucos sobre Cloud</p>
+        </div>
+
       </div>
     </section>
 
+    <!-- 4. Newsletter (justo después del curso) -->
     <section class="newsletter-section">
-  <h2>Suscríbete a mi Newsletter</h2>
-  <p class="newsletter-desc">Únete y recibe descuentos y contenido exclusivo</p>
-  <div class="newsletter-embed">
-    <iframe
-      src="https://joaquingamiz.substack.com/embed"
-      style="border:0; width:100%; height:320px;"
-      frameborder="0"
-      scrolling="no"
-      title="Suscríbete a la newsletter de Joaquín Gamiz">
-    </iframe>
-  </div>
-</section>
+      <h2>Suscríbete a mi Newsletter</h2>
+      <p class="newsletter-desc">Únete y recibe descuentos y contenido exclusivo</p>
+      <div class="newsletter-embed">
+        <iframe
+          src="https://joaquingamiz.substack.com/embed"
+          style="border:0; width:100%; height:320px;"
+          frameborder="0"
+          scrolling="no"
+          title="Suscríbete a la newsletter de Joaquín Gamiz">
+        </iframe>
+      </div>
+      <!-- Botón de refuerzo en caso de que el iframe no cargue -->
+      <a class="btn btn-accent" href="https://joaquingamiz.substack.com/" target="_blank" rel="noopener">
+        Suscribirme por Email
+      </a>
+    </section>
+
+    <!-- 5. Redes Secundarias -->
+    <section class="social">
+      <h2>Sígueme también en</h2>
+      <div class="social-links">
+        <a class="btn btn-solid" href="https://x.com/home?lang=es" target="_blank" rel="noopener">Twitter (X)</a>
+        <!-- Añade más si quieres: Discord, GitHub, etc. -->
+      </div>
+    </section>
+
+    <!-- 6. Footer -->
+    <footer class="footer">
+      <p>© 2025 Joaquín Gamiz</p>
+      <!-- Aquí podrías enlazar tu Aviso Legal -->
+    </footer>
 
   </div>
 </body>
