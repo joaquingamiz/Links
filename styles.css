@@ -23,34 +23,32 @@ body {
   max-width: 480px;
   margin: 0 auto;
   padding: 2rem 1rem;
-  text-align: center;
 }
 
-/* Header */
-.header {
-  margin-bottom: 1rem;
-  position: relative;
+/* HEADER perfil */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
 }
-.logo {
-  width: 100px;
-  margin: 0 auto;
-  display: block;
-}
-/* Foto personal redimensionada */
-.profile-pic {
-  width: 40px;
-  height: 40px;
+.avatar {
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   object-fit: cover;
-  display: block;
-  margin: -20px auto 0;
   border: 2px solid var(--fg);
-  background: var(--gray);
 }
-.subtitle {
+.profile-info .name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+.profile-info .role {
+  font-size: 0.9rem;
   font-weight: 300;
-  font-size: 1rem;
-  margin-top: 0.75rem;
+  opacity: 0.8;
+  margin: 0;
 }
 
 /* Nubecín highlight */
@@ -60,14 +58,14 @@ body {
   text-align: left;
 }
 .nubecin-img {
-  width: 80px;
+  width: 60px;
   height: auto;
   display: inline-block;
 }
 .nubecin-arrow {
   position: absolute;
   top: 20px;
-  left: 90px;
+  left: 70px;
   width: 0;
   height: 0;
   border: 8px solid transparent;
@@ -78,18 +76,19 @@ body {
 .nubecin-text {
   position: absolute;
   top: 0;
-  left: 110px;
+  left: 90px;
+  background: var(--accent);
   color: var(--fg);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 600;
   padding: 0.25rem 0.5rem;
-  background: var(--accent);
   border-radius: 4px;
 }
 
 /* Hero / Curso */
 .hero {
   margin-bottom: 2rem;
+  text-align: center;
 }
 .hero h2 {
   font-size: 1.4rem;
@@ -102,7 +101,7 @@ body {
   color: #ccc;
 }
 
-/* Botones base */
+/* Botones */
 .btn {
   display: block;
   width: 100%;
@@ -150,6 +149,7 @@ body {
 /* Contenido Principal */
 .main-content {
   margin-bottom: 2rem;
+  text-align: center;
 }
 .main-content h2 {
   font-size: 1.3rem;
@@ -162,7 +162,6 @@ body {
   gap: 1.5rem;
 }
 .link-item {
-  width: 100%;
   background: var(--gray);
   padding: 1rem;
   border-radius: 10px;
@@ -186,8 +185,9 @@ body {
   font-size: 0.8rem;
   color: #666;
   opacity: 0.8;
+  text-align: center;
   margin-top: 2rem;
 }
 .footer p {
-  margin-top: 1rem;
+  margin: 0;
 }
