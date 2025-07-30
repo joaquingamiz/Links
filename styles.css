@@ -27,16 +27,27 @@ body {
 
 .header {
   margin-bottom: 1.5rem;
+  position: relative;
 }
 .logo {
   width: 100px;
   margin: 0 auto;
   display: block;
 }
+.profile-pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: -30px auto 0; /* superpone ligeramente sobre logo */
+  border: 2px solid var(--fg);
+  background: var(--gray);
+}
 .subtitle {
   font-weight: 300;
   font-size: 1rem;
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
 }
 
 .hero {
@@ -73,7 +84,6 @@ body {
   transform: translateY(-2px);
 }
 
-/* Enlaces destacados */
 .btn-solid {
   background: var(--accent);
   border-color: var(--accent);
