@@ -1,12 +1,11 @@
 :root {
-  --bg: #0A1128;       /* Azul noche suave */
+  --bg: #0A1128;
   --fg: #fff;
   --gray: #1A1A2E;
   --accent: #E63946;
   --font: 'Poppins', sans-serif;
 }
 
-/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -26,7 +25,6 @@ body {
   text-align: center;
 }
 
-/* Header */
 .header {
   margin-bottom: 1.5rem;
 }
@@ -41,7 +39,6 @@ body {
   margin-top: 0.5rem;
 }
 
-/* Hero / Curso */
 .hero {
   margin-bottom: 2rem;
 }
@@ -56,7 +53,6 @@ body {
   color: #ccc;
 }
 
-/* Botones base */
 .btn {
   display: block;
   width: 100%;
@@ -75,7 +71,6 @@ body {
   transform: translateY(-2px);
 }
 
-/* Botones sólidos */
 .btn-solid {
   background: var(--gray);
   border-color: var(--gray);
@@ -86,7 +81,6 @@ body {
   border-color: var(--fg);
 }
 
-/* Botón de acento */
 .btn-accent {
   border-color: var(--accent);
   color: var(--accent);
@@ -96,16 +90,17 @@ body {
   color: var(--bg);
 }
 
-/* Sección newsletter compacto */
-.newsletter-compact {
+.newsletter-embed-section {
   margin-bottom: 2rem;
 }
-.newsletter-compact .btn {
-  max-width: 240px;
-  margin: 0 auto;
+.newsletter-embed-section iframe {
+  width: 100%;
+  max-width: 360px;
+  height: 200px;
+  border-radius: 8px;
+  border: none;
 }
 
-/* Contenido Principal */
 .main-content {
   margin-bottom: 2rem;
 }
@@ -118,6 +113,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  align-items: center;
 }
 .link-item {
   background: var(--gray);
@@ -125,6 +121,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.5);
   transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
 }
 .link-item:hover {
   transform: translateY(-3px);
@@ -137,11 +134,11 @@ body {
   opacity: 0.9;
 }
 
-/* Footer */
 .footer {
   font-size: 0.8rem;
   color: #666;
   opacity: 0.8;
+  margin-top: 2rem;
 }
 .footer p {
   margin-top: 1rem;
