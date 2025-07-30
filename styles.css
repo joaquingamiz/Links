@@ -25,7 +25,7 @@ body {
   padding: 2rem 1rem;
 }
 
-/* Tarjetas generales */
+/* Tarjetas */
 .card {
   background: var(--gray);
   border-radius: 12px;
@@ -34,7 +34,7 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
 
-/* Perfil */
+/* HEADER perfil */
 .profile-header {
   display: flex;
   align-items: center;
@@ -48,23 +48,167 @@ body {
   object-fit: cover;
   border: 2px solid var(--fg);
 }
+.profile-info .name {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.profile-info .role {
+  font-size: 0.9rem;
+  font-weight: 300;
+  opacity: 0.8;
+}
 
-/* ...resto de estilos sin cambios... */
+/* HERO / CURSO */
+.hero { text-align: center; }
+.hero h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.hero-desc {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #ccc;
+}
 
-/* Modal base (oculto) */
+/* Nubecín post */
+.nubecin-post {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.nubecin-img-post {
+  width: 60px;
+  max-width: 15vw;
+  height: auto;
+}
+.nubecin-caption {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* Botones */
+.btn {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--fg);
+  background: transparent;
+  border: 2px solid var(--fg);
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s, transform 0.2s, filter 0.3s;
+  margin: 0.5rem 0;
+}
+.btn:hover,
+.btn:focus {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+  outline: none;
+}
+.btn i {
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+  vertical-align: middle;
+}
+
+/* Botón destacado */
+.btn-accent {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.btn-accent:hover,
+.btn-accent:focus {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* Enlaces destacados */
+.btn-solid {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
+}
+.btn-solid:hover,
+.btn-solid:focus {
+  background: var(--fg);
+  color: var(--bg);
+  border-color: var(--fg);
+}
+
+/* Contenido Principal */
+.main-content { text-align: center; }
+.main-content h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.link-item {
+  background: var(--gray);
+  padding: 1rem;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.link-item:hover,
+.link-item:focus-within {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+}
+.link-desc {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #ddd;
+  opacity: 0.9;
+}
+
+/* Colaborador */
+.collab-card iframe {
+  border-radius: 12px;
+  width: 100%;
+  height: 232px;
+}
+.collab-desc {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #ccc;
+  text-align: center;
+}
+
+/* Sobre Mí */
+.about-card .about-content h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+.media-embed h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.media-embed iframe {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Modal overlay (centrado) */
 .modal {
   display: none;
   position: fixed;
   z-index: 2000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
   background-color: rgba(0,0,0,0.7);
-}
-
-/* Modal en estado abierto */
-.modal.open {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,7 +224,7 @@ body {
   position: relative;
 }
 
-/* Close button */
+/* Close button (×) */
 .modal-close {
   position: absolute;
   top: 0.5rem;
@@ -90,7 +234,7 @@ body {
   cursor: pointer;
 }
 
-/* Contact form */
+/* Contacto Formspree */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -111,7 +255,7 @@ body {
   color: var(--fg);
 }
 
-/* Floating logo button */
+/* Botón flotante de logo */
 .floating-logo {
   position: fixed;
   bottom: 30px;
@@ -128,7 +272,7 @@ body {
 }
 .floating-logo:hover img {
   transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer */
