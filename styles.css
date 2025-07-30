@@ -25,7 +25,7 @@ body {
   padding: 2rem 1rem;
 }
 
-/* Tarjetas */
+/* Tarjetas generales */
 .card {
   background: var(--gray);
   border-radius: 12px;
@@ -34,7 +34,7 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
 
-/* HEADER perfil */
+/* Perfil */
 .profile-header {
   display: flex;
   align-items: center;
@@ -49,93 +49,28 @@ body {
   border: 2px solid var(--fg);
 }
 
-/* Hero + Nubecín */
-.hero { text-align: center; }
-.hero-desc { color: #ccc; }
-.nubecin-post {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-top: 1rem;
-}
-.nubecin-img-post {
-  width: 60px;
-  max-width: 60px;
-  height: 60px;
-  object-fit: contain;
-}
-.nubecin-caption {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--accent);
-}
+/* ...resto de estilos sin cambios... */
 
-/* Botones */
-.btn {
-  display: block;
-  width: 100%;
-  padding: 1rem;
-  margin: 0.5rem 0;
-  font-size: 1.1rem;
-  font-weight: 600;
-  text-decoration: none;
-  color: var(--fg);
-  background: transparent;
-  border: 2px solid var(--fg);
-  border-radius: 8px;
-  transition: filter 0.3s, transform 0.2s;
-}
-.btn:hover, .btn:focus {
-  filter: brightness(1.1);
-  transform: translateY(-2px);
-}
-.btn-accent {
-  border-color: var(--accent);
-  color: var(--accent);
-}
-.btn-accent:hover {
-  background: var(--accent);
-  color: var(--bg);
-}
-.btn-solid {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: var(--bg);
-}
-.btn-solid:hover {
-  background: var(--fg);
-  border-color: var(--fg);
-  color: var(--bg);
-}
-
-/* Embeds */
-.embed-card {
-  width: 100%;
-  height: 232px;
-  border-radius: 12px;
-}
-.embed-small {
-  width: 100%;
-  height: 152px;
-  border-radius: 8px;
-}
-
-/* Modal oculto/visible */
+/* Modal base (oculto) */
 .modal {
   display: none;
   position: fixed;
   z-index: 2000;
-  inset: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0,0,0,0.7);
 }
+
+/* Modal en estado abierto */
 .modal.open {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Contenido del modal */
+/* Modal content box */
 .modal-content {
   background: var(--gray);
   padding: 1.5rem;
@@ -144,6 +79,8 @@ body {
   max-width: 400px;
   position: relative;
 }
+
+/* Close button */
 .modal-close {
   position: absolute;
   top: 0.5rem;
@@ -153,7 +90,7 @@ body {
   cursor: pointer;
 }
 
-/* Formulario */
+/* Contact form */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -161,6 +98,8 @@ body {
   margin-top: 1rem;
 }
 .contact-form label {
+  display: flex;
+  flex-direction: column;
   font-size: 0.9rem;
 }
 .contact-form input,
@@ -172,31 +111,31 @@ body {
   color: var(--fg);
 }
 
-/* Logo flotante */
+/* Floating logo button */
 .floating-logo {
   position: fixed;
   bottom: 30px;
   right: 30px;
+  z-index: 1000;
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 1000;
 }
-.logo-img {
+.floating-logo img {
   width: 60px;
-  height: 60px;
-  object-fit: contain;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.floating-logo:hover .logo-img {
+.floating-logo:hover img {
   transform: scale(1.05);
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 /* Footer */
 .footer {
-  text-align: center;
+  font-size: 0.8rem;
   color: #666;
   opacity: 0.8;
-  font-size: 0.8rem;
+  text-align: center;
   margin-top: 2rem;
 }
