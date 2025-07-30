@@ -167,12 +167,8 @@
     const btn   = document.querySelector('.floating-logo');
     const close = document.getElementById('modal-close');
 
-    btn.addEventListener('click', () => {
-      modal.classList.toggle('open');
-    });
-    close.addEventListener('click', () => {
-      modal.classList.remove('open');
-    });
+    btn.addEventListener('click', () => modal.classList.toggle('open'));
+    close.addEventListener('click', () => modal.classList.remove('open'));
     window.addEventListener('click', e => {
       if (e.target === modal) modal.classList.remove('open');
     });
