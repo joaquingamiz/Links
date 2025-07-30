@@ -1,7 +1,7 @@
 :root {
-  --bg: #000;
+  --bg: #0A1128;       /* Azul noche suave */
   --fg: #fff;
-  --gray: #111;
+  --gray: #1A1A2E;
   --accent: #E63946;
   --font: 'Poppins', sans-serif;
 }
@@ -14,11 +14,7 @@
 }
 
 body {
-  background: linear-gradient(
-    135deg,
-    #0A1128 0%,
-    #121212 100%
-  );
+  background: var(--bg);
   color: var(--fg);
   font-family: var(--font);
 }
@@ -100,6 +96,15 @@ body {
   color: var(--bg);
 }
 
+/* Sección newsletter compacto */
+.newsletter-compact {
+  margin-bottom: 2rem;
+}
+.newsletter-compact .btn {
+  max-width: 240px;
+  margin: 0 auto;
+}
+
 /* Contenido Principal */
 .main-content {
   margin-bottom: 2rem;
@@ -130,46 +135,6 @@ body {
   font-size: 0.9rem;
   color: #ddd;
   opacity: 0.9;
-}
-
-/* Newsletter */
-.newsletter-section {
-  margin-bottom: 2rem;
-}
-.newsletter-section h2 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-.newsletter-desc {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  color: #ccc;
-}
-.newsletter-embed {
-  width: 100%;
-  max-width: 360px;
-  margin: 0 auto 1rem;
-}
-.newsletter-embed iframe {
-  width: 100%;
-  height: 320px;
-  border-radius: 8px;
-}
-
-/* Redes Secundarias */
-.social {
-  margin-bottom: 2rem;
-}
-.social h2 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-}
-.social-links {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
 }
 
 /* Footer */
