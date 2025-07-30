@@ -6,6 +6,7 @@
   --font: 'Poppins', sans-serif;
 }
 
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -25,8 +26,9 @@ body {
   text-align: center;
 }
 
+/* Header */
 .header {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   position: relative;
 }
 .logo {
@@ -34,13 +36,14 @@ body {
   margin: 0 auto;
   display: block;
 }
+/* Foto personal redimensionada */
 .profile-pic {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   object-fit: cover;
   display: block;
-  margin: -30px auto 0; /* superpone ligeramente sobre logo */
+  margin: -20px auto 0;
   border: 2px solid var(--fg);
   background: var(--gray);
 }
@@ -50,6 +53,41 @@ body {
   margin-top: 0.75rem;
 }
 
+/* Nubecín highlight */
+.nubecin-wrapper {
+  position: relative;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+.nubecin-img {
+  width: 80px;
+  height: auto;
+  display: inline-block;
+}
+.nubecin-arrow {
+  position: absolute;
+  top: 20px;
+  left: 90px;
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-bottom-color: var(--accent);
+  border-right-color: var(--accent);
+  transform: rotate(-45deg);
+}
+.nubecin-text {
+  position: absolute;
+  top: 0;
+  left: 110px;
+  color: var(--fg);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  background: var(--accent);
+  border-radius: 4px;
+}
+
+/* Hero / Curso */
 .hero {
   margin-bottom: 2rem;
 }
@@ -64,6 +102,7 @@ body {
   color: #ccc;
 }
 
+/* Botones base */
 .btn {
   display: block;
   width: 100%;
@@ -84,6 +123,7 @@ body {
   transform: translateY(-2px);
 }
 
+/* Enlaces destacados */
 .btn-solid {
   background: var(--accent);
   border-color: var(--accent);
@@ -96,6 +136,7 @@ body {
   border-color: var(--fg);
 }
 
+/* Botón de acento */
 .btn-accent {
   border-color: var(--accent);
   color: var(--accent);
@@ -106,6 +147,7 @@ body {
   color: var(--bg);
 }
 
+/* Contenido Principal */
 .main-content {
   margin-bottom: 2rem;
 }
@@ -114,7 +156,6 @@ body {
   font-weight: 600;
   margin-bottom: 1rem;
 }
-
 .links-list {
   display: flex;
   flex-direction: column;
@@ -140,6 +181,7 @@ body {
   opacity: 0.9;
 }
 
+/* Footer */
 .footer {
   font-size: 0.8rem;
   color: #666;
