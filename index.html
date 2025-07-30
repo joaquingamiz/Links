@@ -62,8 +62,7 @@
                 allow="encrypted-media" allowfullscreen>
         </iframe>
         <p class="collab-desc">
-          Formo parte del proyecto entrevistando a referentes del sector y contribuyendo con mi
-          experiencia en Cloud y Ciberseguridad.
+          Formo parte del proyecto entrevistando a referentes del sector y contribuyendo con mi experiencia en Cloud y Ciberseguridad.
         </p>
       </section>
     </div>
@@ -93,7 +92,7 @@
       <img src="logo.png" alt="Logo de contacto" />
     </button>
 
-    <!-- Modal de contacto -->
+    <!-- Modal de contacto (oculto por defecto) -->
     <div id="contact-modal" class="modal">
       <div class="modal-content">
         <span id="modal-close" class="modal-close">&times;</span>
@@ -129,14 +128,19 @@
     const btn   = document.querySelector('.floating-logo');
     const close = document.getElementById('modal-close');
 
+    // Al click en el logo, alternar visibilidad
     btn.addEventListener('click', () => {
       modal.classList.toggle('open');
     });
+    // Al click en la X, cerrar
     close.addEventListener('click', () => {
       modal.classList.remove('open');
     });
+    // Al click fuera del contenido, cerrar
     window.addEventListener('click', e => {
-      if (e.target === modal) modal.classList.remove('open');
+      if (e.target === modal) {
+        modal.classList.remove('open');
+      }
     });
   </script>
 </body>
