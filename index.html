@@ -128,15 +128,13 @@
     const btn   = document.querySelector('.floating-logo');
     const close = document.getElementById('modal-close');
 
-    // Al click en el logo, alternar visibilidad
+    // Alterna la clase .open para mostrar/ocultar
     btn.addEventListener('click', () => {
       modal.classList.toggle('open');
     });
-    // Al click en la X, cerrar
     close.addEventListener('click', () => {
       modal.classList.remove('open');
     });
-    // Al click fuera del contenido, cerrar
     window.addEventListener('click', e => {
       if (e.target === modal) {
         modal.classList.remove('open');
