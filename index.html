@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,12 +7,14 @@
   <title>JG Links</title>
   <!-- Fuente Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="site-container">
 
-    <!-- 1. HEADER tipo perfil -->
+    <!-- HEADER perfil -->
     <header class="profile-header">
       <img src="yo.png" alt="Foto de Joaquín" class="avatar">
       <div class="profile-info">
@@ -20,57 +23,72 @@
       </div>
     </header>
 
-    <!-- 2. HERO / CURSO AZ‑900 -->
-    <section class="hero">
-      <h2>Mi Curso - Aprende del Cloud desde 0 (AZ‑900)</h2>
-      <p class="hero-desc">Empieza hoy y domina los fundamentos de Microsoft Azure.</p>
-      <a class="btn btn-accent"
-         href="https://www.udemy.com/course/az-900-fundamentos-de-microsoft-azure-para-principiantes/?referralCode=772F542AD3AF223DF091"
-         target="_blank" rel="noopener">
-        Ir al curso en Udemy (CON DESCUENTO)
-      </a>
-
-      <!-- Nubecín debajo del botón -->
-      <div class="nubecin-post">
-        <img src="nubecin_sin_fondo.png" alt="Nubecín" class="nubecin-img">
-        <p class="nubecin-caption">¡Hola! Soy Nubecín, tu asistente personal y estoy incluido solo en este curso.</p>
+    <!-- TARJETA Hero + Nubecín -->
+    <div class="card hero-card">
+      <!-- Nubecín en línea -->
+      <div class="nubecin-inline">
+        <img src="nubecin_sin_fondo.png" alt="Nubecín" class="nubecin-img-inline">
+        <div class="nubecin-msg-inline">¡Hola! Soy Nubecín, tu asistente personal y estoy incluido solo en este curso.</div>
       </div>
-    </section>
 
-    <!-- 3. CONTENIDO PRINCIPAL -->
-    <section class="main-content">
-      <h2>Contenido Principal</h2>
-      <div class="links-list">
+      <!-- Hero / Curso -->
+      <section class="hero">
+        <h2>Mi Curso - Aprende del Cloud desde 0 (AZ‑900)</h2>
+        <p class="hero-desc">Empieza hoy y domina los fundamentos de Microsoft Azure.</p>
+        <a class="btn btn-accent"
+           href="https://www.udemy.com/course/az-900-fundamentos-de-microsoft-azure-para-principiantes/?referralCode=772F542AD3AF223DF091"
+           target="_blank" rel="noopener">
+          Ir al curso en Udemy (CON DESCUENTO)
+        </a>
+      </section>
+    </div>
 
-        <div class="link-item">
-          <a class="btn btn-solid" href="https://www.linkedin.com/in/joaquin-gamiz/" target="_blank">LinkedIn</a>
-          <p class="link-desc">Publicaciones diarias sobre Ciberseguridad, Cloud y IA</p>
+    <!-- TARJETA Contenido Principal -->
+    <div class="card content-card">
+      <section class="main-content">
+        <h2>Contenido Principal</h2>
+        <div class="links-list">
+
+          <div class="link-item">
+            <a class="btn btn-solid" href="https://www.linkedin.com/in/joaquin-gamiz/" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin-in"></i> LinkedIn
+            </a>
+            <p class="link-desc">Conecta conmigo y accede a publicaciones diarias prácticas sobre Cloud, IA y Ciberseguridad.</p>
+          </div>
+
+          <div class="link-item">
+            <a class="btn btn-solid" href="https://www.instagram.com/joaquin_gamiz/" target="_blank" rel="noopener">
+              <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <p class="link-desc">Reels sobre ciberseguridad, Cloud e IA</p>
+          </div>
+
+          <div class="link-item">
+            <a class="btn btn-solid" href="https://www.youtube.com/@joaquin_gamiz" target="_blank" rel="noopener">
+              <i class="fab fa-youtube"></i> YouTube
+            </a>
+            <p class="link-desc">Cómo empecé en ciberseguridad, IA y tutoriales para aprender desde la experiencia real</p>
+          </div>
+
+          <div class="link-item">
+            <a class="btn btn-solid" href="https://www.tiktok.com/@joaquin_gamiz" target="_blank" rel="noopener">
+              <i class="fab fa-tiktok"></i> TikTok
+            </a>
+            <p class="link-desc">Consejos rápidos y trucos sobre Cloud</p>
+          </div>
+
+          <div class="link-item">
+            <a class="btn btn-solid" href="https://joaquingamiz.substack.com/" target="_blank" rel="noopener">
+              <i class="fas fa-blog"></i> Blog
+            </a>
+            <p class="link-desc">Artículos detallados contando mi experiencia</p>
+          </div>
+
         </div>
+      </section>
+    </div>
 
-        <div class="link-item">
-          <a class="btn btn-solid" href="https://www.instagram.com/joaquin_gamiz/" target="_blank">Instagram</a>
-          <p class="link-desc">Reels sobre ciberseguridad, Cloud e IA</p>
-        </div>
-
-        <div class="link-item">
-          <a class="btn btn-solid" href="https://www.youtube.com/@joaquin_gamiz" target="_blank">YouTube</a>
-          <p class="link-desc">Cómo empecé en ciberseguridad, IA y tutoriales para aprender desde la experiencia real</p>
-        </div>
-
-        <div class="link-item">
-          <a class="btn btn-solid" href="https://www.tiktok.com/@joaquin_gamiz" target="_blank">TikTok</a>
-          <p class="link-desc">Consejos rápidos y trucos sobre Cloud</p>
-        </div>
-
-        <div class="link-item">
-          <a class="btn btn-solid" href="https://joaquingamiz.substack.com/" target="_blank">Blog</a>
-          <p class="link-desc">Artículos detallados contando mi experiencia</p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- 4. FOOTER -->
+    <!-- FOOTER -->
     <footer class="footer">
       <p>© 2025 todos los derechos reservados a JG</p>
     </footer>
