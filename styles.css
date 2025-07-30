@@ -83,7 +83,7 @@ body {
 }
 .nubecin-img-post {
   width: 60px;
-  max-width: 15vw;
+  max-width: 15vw; /* mantiene buen tamaño en escritorio */
   height: auto;
 }
 .nubecin-caption {
@@ -176,11 +176,6 @@ body {
 }
 
 /* Colaborador */
-.collab-content h2 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-}
 .collab-card iframe {
   border-radius: 12px;
   width: 100%;
@@ -194,10 +189,11 @@ body {
 }
 
 /* Sobre Mí */
-.about-content h2 {
+.about-card .about-content h2 {
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
+  text-align: center;
 }
 .media-embed h3 {
   font-size: 1rem;
