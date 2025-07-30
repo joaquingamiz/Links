@@ -58,26 +58,6 @@ body {
   opacity: 0.8;
 }
 
-/* Nubecín en línea */
-.nubecin-inline {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-}
-.nubecin-img-inline {
-  width: 60px;
-  max-width: 15vw; /* mantiene buen tamaño en escritorio */
-  height: auto;
-}
-.nubecin-msg-inline {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--accent);
-  text-align: left;
-}
-
 /* HERO / CURSO */
 .hero {
   text-align: center;
@@ -91,6 +71,25 @@ body {
   font-size: 1rem;
   margin-bottom: 1rem;
   color: #ccc;
+}
+
+/* Nubecín post */
+.nubecin-post {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.nubecin-img-post {
+  width: 60px;
+  max-width: 15vw;
+  height: auto;
+}
+.nubecin-caption {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent);
 }
 
 /* Botones */
@@ -177,27 +176,36 @@ body {
 }
 
 /* Colaborador */
-.collab-card .collab-content h2 {
+.collab-content h2 {
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
-  text-align: center;
 }
-.collab-card .collab-content .btn {
-  max-width: 200px;
-  margin: 0 auto;
+.collab-card iframe {
+  border-radius: 12px;
+  width: 100%;
+  height: 232px;
+}
+.collab-desc {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #ccc;
+  text-align: center;
 }
 
 /* Sobre Mí */
-.about-card .about-content h2 {
+.about-content h2 {
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
-  text-align: center;
+}
+.media-embed h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 .media-embed iframe {
   width: 100%;
-  height: 200px;
   border-radius: 8px;
 }
 
