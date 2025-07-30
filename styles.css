@@ -6,7 +6,7 @@
   --font: 'Poppins', sans-serif;
 }
 
-/* Reset básico */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -25,7 +25,7 @@ body {
   padding: 2rem 1rem;
 }
 
-/* HEADER tipo perfil */
+/* HEADER perfil */
 .profile-header {
   display: flex;
   align-items: center;
@@ -42,47 +42,11 @@ body {
 .profile-info .name {
   font-size: 1.25rem;
   font-weight: 600;
-  margin: 0;
 }
 .profile-info .role {
   font-size: 0.9rem;
   font-weight: 300;
   opacity: 0.8;
-  margin: 0;
-}
-
-/* Nubecín highlight */
-.nubecin-wrapper {
-  position: relative;
-  margin-bottom: 1rem;
-  text-align: left;
-}
-.nubecin-img {
-  width: 60px;
-  height: auto;
-  display: inline-block;
-}
-.nubecin-arrow {
-  position: absolute;
-  top: 20px;
-  left: 70px;
-  width: 0;
-  height: 0;
-  border: 8px solid transparent;
-  border-bottom-color: var(--accent);
-  border-right-color: var(--accent);
-  transform: rotate(-45deg);
-}
-.nubecin-text {
-  position: absolute;
-  top: 0;
-  left: 90px;
-  background: var(--accent);
-  color: var(--fg);
-  font-size: 0.9rem;
-  font-weight: 600;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
 }
 
 /* HERO / CURSO */
@@ -100,8 +64,6 @@ body {
   margin-bottom: 1rem;
   color: #ccc;
 }
-
-/* Botones */
 .btn {
   display: block;
   width: 100%;
@@ -121,6 +83,32 @@ body {
   outline: 2px solid var(--fg);
   transform: translateY(-2px);
 }
+.btn-accent {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.btn-accent:hover,
+.btn-accent:focus {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* Nubecín debajo del curso */
+.nubecin-post {
+  margin-top: 1rem;
+  text-align: center;
+}
+.nubecin-img {
+  width: 60px;
+  height: auto;
+  display: block;
+  margin: 0 auto 0.5rem;
+}
+.nubecin-caption {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent);
+}
 
 /* Enlaces destacados */
 .btn-solid {
@@ -133,16 +121,6 @@ body {
   background: var(--fg);
   color: var(--bg);
   border-color: var(--fg);
-}
-
-.btn-accent {
-  border-color: var(--accent);
-  color: var(--accent);
-}
-.btn-accent:hover,
-.btn-accent:focus {
-  background: var(--accent);
-  color: var(--bg);
 }
 
 /* Contenido Principal */
