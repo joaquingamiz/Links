@@ -116,8 +116,6 @@ body {
   font-size: 1.1rem;
   vertical-align: middle;
 }
-
-/* Botón destacado */
 .btn-accent {
   border-color: var(--accent);
   color: var(--accent);
@@ -127,8 +125,6 @@ body {
   background: var(--accent);
   color: var(--bg);
 }
-
-/* Enlaces destacados */
 .btn-solid {
   background: var(--accent);
   border-color: var(--accent);
@@ -201,14 +197,17 @@ body {
   border-radius: 8px;
 }
 
-/* Modal overlay (centrado) */
+/* Modal base (oculto) */
 .modal {
   display: none;
   position: fixed;
   z-index: 2000;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
+  inset: 0;
   background-color: rgba(0,0,0,0.7);
+}
+
+/* Modal abierto (centrado) */
+.modal.open {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -255,7 +254,7 @@ body {
   color: var(--fg);
 }
 
-/* Botón flotante de logo */
+/* Floating logo */
 .floating-logo {
   position: fixed;
   bottom: 30px;
@@ -266,13 +265,12 @@ body {
   cursor: pointer;
 }
 .floating-logo img {
-  width: 60px;
+  width: 40px;
   height: auto;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .floating-logo:hover img {
   transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 /* Footer */
