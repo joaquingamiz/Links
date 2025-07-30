@@ -34,15 +34,17 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
 
-/* ...el resto de tus estilos previos intactos... */
+/* (Todos tus estilos anteriores mantienen sin cambios) */
 
 /* Modal base (oculto) */
 .modal {
   display: none;
   position: fixed;
   z-index: 2000;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0,0,0,0.7);
 }
 
@@ -63,7 +65,7 @@ body {
   position: relative;
 }
 
-/* Botón cerrar (×) */
+/* Close button (×) */
 .modal-close {
   position: absolute;
   top: 0.5rem;
@@ -73,7 +75,7 @@ body {
   cursor: pointer;
 }
 
-/* Formulario */
+/* Formulario de contacto */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -94,7 +96,7 @@ body {
   color: var(--fg);
 }
 
-/* Logo flotante */
+/* Botón flotante */
 .floating-logo {
   position: fixed;
   bottom: 30px;
