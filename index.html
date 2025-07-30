@@ -47,7 +47,7 @@
       <section class="main-content">
         <h2>Contenido Principal</h2>
         <div class="links-list">
-          <!-- Tus enlaces aquí -->
+          <!-- ...tus enlaces... -->
         </div>
       </section>
     </div>
@@ -56,12 +56,14 @@
     <div class="card collab-card">
       <section class="collab-content">
         <h2>Colaborador - Un Podcast Seguro</h2>
-        <iframe class="embed-card"
+        <iframe style="border-radius:12px"
                 src="https://open.spotify.com/embed/show/40WZSLjdici4BUn3HnMd0B"
+                width="100%" height="232" frameborder="0"
                 allow="encrypted-media" allowfullscreen>
         </iframe>
         <p class="collab-desc">
-          Formo parte del proyecto entrevistando a referentes del sector y contribuyendo con mi experiencia en Cloud y Ciberseguridad.
+          Formo parte del proyecto entrevistando a referentes del sector y contribuyendo con mi
+          experiencia en Cloud y Ciberseguridad.
         </p>
       </section>
     </div>
@@ -72,16 +74,15 @@
         <h2>Sobre Mí</h2>
         <div class="media-embed">
           <h3>Entrevista en "Un Podcast Seguro"</h3>
-          <iframe class="embed-small"
-                  src="https://open.spotify.com/embed/episode/7qiy6RwSVIdEB0bRM8X3K9"
-                  allow="encrypted-media" allowfullscreen>
+          <iframe src="https://open.spotify.com/embed/episode/7qiy6RwSVIdEB0bRM8X3K9"
+                  width="100%" height="152" frameborder="0" allowfullscreen>
           </iframe>
         </div>
         <div class="media-embed" style="margin-top:1rem;">
           <h3>Entrevista con "PantaSec"</h3>
-          <iframe class="embed-small"
+          <iframe width="100%" height="200"
                   src="https://www.youtube.com/embed/UYhwrwBbVvI"
-                  allowfullscreen>
+                  frameborder="0" allowfullscreen>
           </iframe>
         </div>
       </section>
@@ -89,10 +90,10 @@
 
     <!-- Botón flotante que abre el modal -->
     <button class="floating-logo" aria-label="Abrir formulario de contacto">
-      <img src="logo.png" alt="Logo de contacto" class="logo-img"/>
+      <img src="logo.png" alt="Logo de contacto" />
     </button>
 
-    <!-- Modal de contacto (oculto por defecto) -->
+    <!-- Modal de contacto -->
     <div id="contact-modal" class="modal">
       <div class="modal-content">
         <span id="modal-close" class="modal-close">&times;</span>
@@ -128,8 +129,12 @@
     const btn   = document.querySelector('.floating-logo');
     const close = document.getElementById('modal-close');
 
-    btn.addEventListener('click', () => modal.classList.toggle('open'));
-    close.addEventListener('click', () => modal.classList.remove('open'));
+    btn.addEventListener('click', () => {
+      modal.classList.toggle('open');
+    });
+    close.addEventListener('click', () => {
+      modal.classList.remove('open');
+    });
     window.addEventListener('click', e => {
       if (e.target === modal) modal.classList.remove('open');
     });
