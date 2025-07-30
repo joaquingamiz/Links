@@ -205,6 +205,40 @@ body {
   border-radius: 8px;
 }
 
+/* Modal overlay */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7);
+}
+
+/* Modal content box */
+.modal-content {
+  background: var(--gray);
+  margin: 10% auto;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+}
+
+/* Close button (×) */
+.modal-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  color: var(--fg);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
 /* Contacto Formspree */
 .contact-form {
   display: flex;
@@ -225,17 +259,16 @@ body {
   background: transparent;
   color: var(--fg);
 }
-.contact-form .btn-solid {
-  margin-top: 0.5rem;
-}
 
-/* Botón flotante de contacto */
+/* Botón flotante de logo (abre modal) */
 .floating-logo {
   position: fixed;
   bottom: 30px;
   right: 30px;
   z-index: 1000;
-  display: inline-block;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 .floating-logo img {
   width: 60px;
