@@ -71,9 +71,11 @@ body {
   transform: translateY(-2px);
 }
 
+/* Estilo para destacar enlaces clicables con color de acento */
 .btn-solid {
-  background: var(--gray);
-  border-color: var(--gray);
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
 }
 .btn-solid:hover {
   background: var(--fg);
@@ -99,6 +101,7 @@ body {
   height: 200px;
   border-radius: 8px;
   border: none;
+  background: var(--gray);
 }
 
 .main-content {
@@ -107,13 +110,9 @@ body {
 .main-content h2 {
   font-size: 1.3rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-.links-instruction {
-  font-size: 0.95rem;
-  color: #ccc;
   margin-bottom: 1rem;
 }
+
 .links-list {
   display: flex;
   flex-direction: column;
@@ -121,12 +120,12 @@ body {
   align-items: center;
 }
 .link-item {
+  width: 100%;
   background: var(--gray);
   padding: 1rem;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.5);
   transition: transform 0.3s, box-shadow 0.3s;
-  width: 100%;
 }
 .link-item:hover {
   transform: translateY(-3px);
