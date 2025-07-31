@@ -57,6 +57,16 @@ body {
   font-weight: 300;
   opacity: 0.8;
 }
+.intro-link {
+  font-size: 0.8rem;
+  color: var(--fg);
+  text-align: center;
+  margin-top: 0.25rem;
+}
+.intro-link a {
+  color: var(--fg);
+  text-decoration: underline;
+}
 
 /* HERO / CURSO */
 .hero { text-align: center; }
