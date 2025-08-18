@@ -57,6 +57,7 @@ body {
   font-weight: 300;
   opacity: 0.8;
 }
+
 .intro-link {
   font-size: 0.8rem;
   color: var(--fg);
@@ -290,4 +291,35 @@ body {
   opacity: 0.8;
   text-align: center;
   margin-top: 2rem;
+}
+
+/* ====== Añadidos RGPD / Política de Privacidad ====== */
+
+/* Enlace del footer a la política */
+.privacy-link {
+  color: #ddd;
+  font-size: 0.85rem;
+  text-decoration: underline;
+  opacity: 0.95;
+}
+.privacy-link:hover { opacity: 1; }
+
+/* Consentimiento RGPD en el formulario */
+.contact-form .consent {
+  display: flex;
+  align-items: flex-start;
+  gap: .5rem;
+  font-size: .85rem;
+  line-height: 1.3;
+}
+.contact-form .consent a {
+  color: var(--fg);
+  text-decoration: underline;
+}
+
+/* Nota informativa bajo el botón */
+.form-note {
+  margin-top: .5rem;
+  font-size: .8rem;
+  color: #ccc;
 }
