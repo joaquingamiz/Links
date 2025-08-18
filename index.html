@@ -162,8 +162,16 @@
             Mensaje
             <textarea name="message" rows="4" required></textarea>
           </label>
+          <!-- Consentimiento RGPD requerido -->
+          <label class="consent">
+            <input type="checkbox" name="privacy_consent" required>
+            He leído y acepto la <a href="privacy.html" target="_blank" rel="noopener">Política de Privacidad</a>.
+          </label>
+          <!-- Metadato opcional para identificar el formulario -->
+          <input type="hidden" name="form_name" value="contacto_web_JG">
           <input type="hidden" name="_captcha" value="false">
           <button type="submit" class="btn btn-solid">Enviar mensaje</button>
+          <p class="form-note">Tus datos se enviarán de forma segura y serán gestionados por JG a través de Formspree únicamente para responder a tu solicitud.</p>
         </form>
       </div>
     </div>
@@ -171,6 +179,9 @@
     <!-- FOOTER -->
     <footer class="footer">
       <p>© 2025 todos los derechos reservados a Joaquín Gamiz (JG)</p>
+      <p style="margin-top:.4rem;">
+        <a href="privacy.html" class="privacy-link">Política de Privacidad</a>
+      </p>
     </footer>
 
   </div>
