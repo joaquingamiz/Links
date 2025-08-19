@@ -47,7 +47,29 @@
         </div>
       </section>
     </div>
+    
+    <!-- TARJETA Newsletter -->
+    <div class="card newsletter-card">
+      <section class="newsletter">
+        <h2>Suscríbete y llévate mi recurso gratuito</h2>
+        <p class="newsletter-desc">
+          Consigue <strong>“Las 7 habilidades clave para empezar en ciberseguridad”</strong> y recibe mis mejores contenidos.
+        </p>
 
+        <!-- Formulario Substack -->
+        <form class="newsletter-form"
+              action="https://joaquingamiz.substack.com/api/v1/free"
+              method="post"
+              target="_blank" rel="noopener">
+          <label class="sr-only" for="news-email">Tu email</label>
+          <input id="news-email" type="email" name="email" placeholder="tu@email.com" required>
+          <button type="submit" class="btn btn-solid">Quiero el recurso y suscribirme</button>
+        </form>
+
+        <p class="newsletter-note">Sin spam. Puedes darte de baja cuando quieras.</p>
+      </section>
+    </div>
+    
     <!-- TARJETA Contenido Principal -->
     <div class="card content-card">
       <section class="main-content">
