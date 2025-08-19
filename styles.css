@@ -148,6 +148,12 @@ body {
   .newsletter-form{ display: flex; flex-direction: row; gap: .6rem; }
   .newsletter-form input{ flex: 1; }
 }
+.newsletter-note{
+  margin-top: .5rem;
+  font-size: .8rem;
+  color: #aaa;
+  text-align: center;
+}
 
 /* Botones */
 .btn {
