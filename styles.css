@@ -102,49 +102,71 @@ body {
 }
 
 /* ====== Newsletter (Substack) ====== */
-.sr-only {
-  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
-  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+.sr-only{
+  position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+  overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;
 }
-.newsletter h2,
-.newsletter-desc { text-align: center; }
-.newsletter-cta{
-  display: flex;
-  align-items: center;
-  gap: .9rem;
-  margin-top: .5rem;
-}
-.skills-img{
-  width: 60px;
-  max-width: 15vw;
-  height: auto;
-  flex: 0 0 auto;
-}
-.newsletter-form{ flex: 1; }
 
-/* Input más integrado con el estilo del sitio */
+.newsletter h2{ text-align:center; }
+.newsletter-desc{
+  text-align:center;
+  color:#ccc;           /* mismo color que hero-desc */
+  font-size:1rem;       /* mismo tamaño que hero-desc */
+  font-weight:400;
+}
+
+.newsletter-cta{
+  display:flex;
+  align-items:center;
+  gap:.9rem;
+  margin-top:.5rem;
+  flex-wrap:wrap;       /* si no cabe, baja el form debajo de la imagen */
+}
+
+.skills-img{
+  width:60px;
+  max-width:15vw;
+  height:auto;
+  flex:0 0 auto;
+}
+
+.newsletter-form{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  gap:.6rem;
+  width:100%;
+}
+
 .newsletter-form input{
-  padding: .85rem 1rem;
-  border: 1px solid var(--fg);
-  border-radius: 10px;
-  background: rgba(255,255,255,0.04);
-  color: var(--fg);
-  font-size: 1rem;
+  padding:.85rem 1rem;
+  border:1px solid var(--fg);
+  border-radius:10px;
+  background:rgba(255,255,255,.04);
+  color:var(--fg);
+  font-size:1rem;
+  width:100%;
 }
-.newsletter-form input::placeholder{
-  color: #bfbfbf;
-  opacity: 1;
-}
+.newsletter-form input::placeholder{ color:#bfbfbf;opacity:1; }
 .newsletter-form input:focus{
-  outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(230,57,70,0.25);
+  outline:none;
+  border-color:var(--accent);
+  box-shadow:0 0 0 3px rgba(230,57,70,.25);
 }
+
+.newsletter-form .btn{
+  width:auto;               /* override del .btn global */
+  align-self:center;        /* centrado horizontal */
+  padding:.9rem 1.2rem;
+  min-width:220px;          /* opcional: tamaño mínimo bonito */
+  text-align:center;
+}
+
 .newsletter-note{
-  margin-top: .5rem;
-  font-size: .8rem;
-  color: #aaa;
-  text-align: center;
+  margin-top:.5rem;
+  font-size:.8rem;
+  color:#aaa;
+  text-align:center;
 }
 
 /* Botones */
