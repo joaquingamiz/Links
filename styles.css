@@ -110,8 +110,8 @@ body {
 .newsletter h2{ text-align:center; }
 .newsletter-desc{
   text-align:center;
-  color:#ccc;           /* mismo color que hero-desc */
-  font-size:1rem;       /* mismo tamaño que hero-desc */
+  color:#ccc;
+  font-size:1rem;
   font-weight:400;
 }
 
@@ -120,7 +120,7 @@ body {
   align-items:center;
   gap:.9rem;
   margin-top:.5rem;
-  flex-wrap:wrap;       /* si no cabe, baja el form debajo de la imagen */
+  flex-wrap:wrap;
 }
 
 .skills-img{
@@ -155,10 +155,10 @@ body {
 }
 
 .newsletter-form .btn{
-  width:auto;               /* override del .btn global */
-  align-self:center;        /* centrado horizontal */
+  width:auto;
+  align-self:center;
   padding:.9rem 1.2rem;
-  min-width:220px;          /* opcional: tamaño mínimo bonito */
+  min-width:220px;
   text-align:center;
 }
 
