@@ -413,9 +413,10 @@ body {
   object-fit: contain;
 }
 .quiz-btn{
-  display: block;
   width: 100%;
-  text-align: center;
+  min-width: 0;
+  padding: 1rem;
+  font-size: 1.1rem;
 }
 @media (min-width: 520px){
   .quiz-img{ width: 140px; max-width: 35%; }
