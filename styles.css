@@ -390,28 +390,28 @@ body {
   color: #ccc;
 }
 
-/* Consentimiento en la newsletter (solo estilo) */
+/* Consentimiento en la newsletter */
 .newsletter-form .consent{
   display: flex;
   align-items: flex-start;
   gap: .5rem;
   font-size: .85rem;
   line-height: 1.35;
-  color: #ddd;              /* texto más suave, como el resto */
+  color: #ddd;
   margin-top: .25rem;
   text-align: left;
   cursor: pointer;
 }
 .newsletter-form .consent a{
-  color: var(--fg);         /* blanco del sitio */
+  color: var(--fg);
   text-decoration: underline;
 }
 .newsletter-form .consent input{
   width: 16px;
   height: 16px;
-  margin-top: .15rem;       /* alinear verticalmente con el texto */
+  margin-top: .15rem;
   flex-shrink: 0;
-  accent-color: var(--accent); /* color del check = rojo de marca */
+  accent-color: var(--accent);
 }
 
 /* ====== CyberQuiz ====== */
