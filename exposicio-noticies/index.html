@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b2b44">
+  <meta name="color-scheme" content="light">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description" content="Exposició de notícies sobre papallones, biodiversitat i educació ambiental.">
+  <title>Exposició de notícies</title>
+  <style>
+    :root{
+      --navy:#0b2b44;--blue:#116b8d;--sea:#20a5ad;--sand:#edbd67;
+      --ink:#11283a;--muted:#5d6b76;--line:rgba(11,43,68,.13);
+      --white:#fff;--glass:rgba(249,252,252,.91);
+      --shadow:0 28px 80px rgba(3,25,41,.34);--card-shadow:0 14px 34px rgba(12,47,70,.14)
+    }
+    *{box-sizing:border-box}
+    html{min-width:320px;min-height:100%;background:#061927;scroll-behavior:smooth}
+    body{
+      min-width:320px;min-height:100vh;min-height:100svh;margin:0;
+      padding:max(22px,env(safe-area-inset-top)) max(14px,env(safe-area-inset-right)) max(28px,env(safe-area-inset-bottom)) max(14px,env(safe-area-inset-left));
+      color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:
+        linear-gradient(135deg,rgba(3,21,35,.78),rgba(7,72,91,.48)),
+        url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Playa_de_la_Conca-Malgrat_de_Mar.jpg/1280px-Playa_de_la_Conca-Malgrat_de_Mar.jpg") center/cover fixed no-repeat;
+    }
+    body::before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 12% 8%,rgba(237,189,103,.26),transparent 30%),radial-gradient(circle at 88% 82%,rgba(32,165,173,.25),transparent 34%)}
+    a{color:inherit}
+    svg{display:block;max-width:100%}
+    .page{position:relative;width:min(100%,1160px);margin:auto;padding:clamp(22px,4vw,48px);overflow:hidden;border:1px solid rgba(255,255,255,.72);border-radius:30px;background:var(--glass);box-shadow:var(--shadow);backdrop-filter:blur(18px) saturate(125%);-webkit-backdrop-filter:blur(18px) saturate(125%)}
+    .hero{text-align:center;display:grid;justify-items:center}
+    .mark{display:grid;grid-template-columns:66px auto;align-items:center;gap:13px;padding:12px 18px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.95);box-shadow:0 12px 28px rgba(9,37,58,.12)}
+    .mark svg{width:66px;height:66px}
+    .mark-copy{text-align:left;line-height:1.02}.mark-copy strong{display:block;color:var(--navy);font-size:1.25rem}.mark-copy span{display:block;margin-top:5px;color:var(--blue);font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+    .eyebrow{margin:25px 0 9px;color:var(--blue);font-size:.78rem;font-weight:850;letter-spacing:.15em;text-transform:uppercase}
+    h1{max-width:900px;margin:0;color:var(--navy);font-size:clamp(2.15rem,6vw,4.5rem);line-height:.98;letter-spacing:-.055em;text-wrap:balance}
+    .intro{max-width:700px;margin:18px auto 0;color:var(--muted);font-size:clamp(1rem,2vw,1.13rem);line-height:1.65;text-wrap:pretty}
+    .rule{display:flex;align-items:center;gap:8px;width:124px;margin-top:22px}.rule::before,.rule::after{content:"";height:5px;flex:1;border-radius:99px;background:linear-gradient(90deg,var(--blue),var(--sea))}.rule span{width:9px;aspect-ratio:1;border-radius:50%;background:var(--sand);box-shadow:0 0 0 4px rgba(237,189,103,.18)}
+    .heading{margin:clamp(34px,5vw,48px) 0 18px;text-align:center}.heading h2{margin:0;color:var(--navy);font-size:clamp(1.35rem,3vw,1.9rem);letter-spacing:-.025em}.heading p{margin:7px 0 0;color:var(--muted);line-height:1.55}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .card{display:flex;min-width:0;min-height:100%;flex-direction:column;overflow:hidden;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.96);box-shadow:0 10px 28px rgba(13,48,72,.10);text-decoration:none;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+    .card:hover{transform:translateY(-5px);border-color:rgba(17,107,141,.35);box-shadow:var(--card-shadow)}.card:focus-visible{outline:4px solid rgba(32,165,173,.42);outline-offset:4px}
+    .preview{position:relative;display:grid;place-items:center;min-height:194px;overflow:hidden;border-bottom:1px solid var(--line)}
+    .preview::before,.preview::after{content:"";position:absolute;border-radius:50%;filter:blur(2px)}
+    .preview::before{width:190px;height:190px;right:-65px;top:-80px;background:rgba(255,255,255,.2)}
+    .preview::after{width:150px;height:150px;left:-55px;bottom:-75px;background:rgba(255,255,255,.16)}
+    .one{background:linear-gradient(145deg,#8bd0dc,#4d966d)}.two{background:linear-gradient(145deg,#173f5b,#27a9af)}.three{background:linear-gradient(145deg,#efcc8d,#568b68)}
+    .source{position:absolute;z-index:2;top:13px;left:13px;max-width:calc(100% - 26px);padding:7px 10px;overflow:hidden;border:1px solid rgba(255,255,255,.46);border-radius:999px;color:#fff;background:rgba(5,29,46,.76);font-size:.72rem;font-weight:800;letter-spacing:.03em;text-overflow:ellipsis;white-space:nowrap;backdrop-filter:blur(8px)}
+    .art{position:relative;z-index:1;width:132px;color:white;filter:drop-shadow(0 12px 18px rgba(3,25,41,.22))}.art path,.art circle,.art rect,.art ellipse{vector-effect:non-scaling-stroke}
+    .body{display:flex;flex:1;flex-direction:column;padding:20px}.date{margin:0 0 8px;color:var(--blue);font-size:.76rem;font-weight:850;letter-spacing:.09em;text-transform:uppercase}.title{margin:0;color:var(--navy);font-size:clamp(1.1rem,2vw,1.28rem);line-height:1.27;letter-spacing:-.022em;text-wrap:pretty}.summary{margin:12px 0 18px;color:var(--muted);font-size:.94rem;line-height:1.55;text-wrap:pretty}.more{display:inline-flex;align-items:center;gap:8px;margin-top:auto;color:var(--blue);font-size:.88rem;font-weight:850}.more svg{width:18px;height:18px;transition:transform .18s ease}.card:hover .more svg{transform:translateX(4px)}
+    footer{margin-top:28px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);text-align:center;font-size:.78rem;line-height:1.55}footer p{margin:4px 0}footer a{color:var(--blue);text-underline-offset:3px}
+    @media(max-width:960px){.grid{grid-template-columns:1fr}.card{display:grid;grid-template-columns:minmax(220px,34%) 1fr}.preview{min-height:225px;border-right:1px solid var(--line);border-bottom:0}}
+    @media(max-width:640px){body{padding:max(11px,env(safe-area-inset-top)) max(9px,env(safe-area-inset-right)) max(16px,env(safe-area-inset-bottom)) max(9px,env(safe-area-inset-left));background-attachment:scroll}.page{padding:22px 14px 18px;border-radius:23px}.mark{grid-template-columns:54px auto;padding:10px 14px}.mark svg{width:54px;height:54px}.mark-copy strong{font-size:1.08rem}.mark-copy span{font-size:.66rem}h1{font-size:clamp(2rem,11vw,3.05rem)}.intro{font-size:.97rem}.card{display:flex}.preview{min-height:176px;border-right:0;border-bottom:1px solid var(--line)}.body{padding:18px}.summary{font-size:.91rem}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div class="mark" aria-label="Malgrat de Mar">
+        <svg viewBox="0 0 80 80" role="img" aria-label="Il·lustració d'una torre i el mar">
+          <circle cx="40" cy="40" r="37" fill="#eef8f7" stroke="#116b8d" stroke-width="3"/>
+          <path d="M24 45V27h8v7h8v-7h8v18" fill="none" stroke="#0b2b44" stroke-width="5" stroke-linejoin="round"/>
+          <path d="M17 51c9-5 17-5 25 0s16 5 24 0M17 60c9-5 17-5 25 0s16 5 24 0" fill="none" stroke="#20a5ad" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="59" cy="22" r="6" fill="#edbd67"/>
+        </svg>
+        <div class="mark-copy"><strong>Malgrat de Mar</strong><span>Mar · natura · cultura</span></div>
+      </div>
+      <p class="eyebrow">Biodiversitat i papallones</p>
+      <h1>exposicio-noticies</h1>
+      <p class="intro">Una selecció de tres reportatges sobre la protecció de les papallones, la ciència ciutadana i l'educació ambiental.</p>
+      <div class="rule" aria-hidden="true"><span></span></div>
+    </header>
+
+    <section aria-labelledby="noticies">
+      <div class="heading"><h2 id="noticies">Tres mirades sobre la biodiversitat</h2><p>Prem qualsevol notícia per obrir l'article original en una pestanya nova.</p></div>
+      <div class="grid">
+        <a class="card" href="https://www.3cat.cat/3catinfo/el-primer-bosc-de-papallones-public-a-catalunya-es-podra-visitar-a-malgrat-de-mar/noticia/3095914/" target="_blank" rel="noopener noreferrer" aria-label="Obrir la notícia de 3CatInfo sobre el primer bosc públic de papallones de Catalunya">
+          <div class="preview one"><span class="source">3CatInfo</span>
+            <svg class="art" viewBox="0 0 160 130" aria-hidden="true"><path d="M80 62C45 19 9 26 12 64c3 29 38 39 68 22z" fill="#f0a64c"/><path d="M80 62c35-43 71-36 68 2-3 29-38 39-68 22z" fill="#ffd064"/><path d="M80 78c-25 12-29 41-9 44 13 2 19-15 18-37z" fill="#d86c50"/><path d="M80 78c25 12 29 41 9 44-13 2-19-15-18-37z" fill="#e57b55"/><ellipse cx="80" cy="73" rx="6" ry="39" fill="#183646"/><path d="M77 37C67 23 59 21 51 20M83 37c10-14 18-16 26-17" fill="none" stroke="#183646" stroke-width="4" stroke-linecap="round"/><circle cx="43" cy="61" r="7" fill="#fff0bd"/><circle cx="117" cy="61" r="7" fill="#fff0bd"/></svg>
+          </div>
+          <div class="body"><p class="date">11 de maig de 2021</p><h3 class="title">El primer bosc de papallones públic a Catalunya es podrà visitar a Malgrat de Mar</h3><p class="summary">Dues reserves al Parc del Castell i al Pla de Pineda creen 600 m² d'hàbitats pensats per afavorir la reproducció de les papallones i apropar la biodiversitat a la ciutadania.</p><span class="more">Llegir la notícia <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M14 7l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+        </a>
+
+        <a class="card" href="https://www.ajmalgrat.cat/comunicacio/noticies/sostenibilitat-engega-un-projecte-dobservatori-ciutada-de-papallones-urbanes.html" target="_blank" rel="noopener noreferrer" aria-label="Obrir la notícia de l'Ajuntament de Malgrat de Mar sobre l'observatori ciutadà de papallones urbanes">
+          <div class="preview two"><span class="source">Ajuntament de Malgrat de Mar</span>
+            <svg class="art" viewBox="0 0 160 130" aria-hidden="true"><circle cx="80" cy="61" r="42" fill="rgba(255,255,255,.18)" stroke="white" stroke-width="5"/><path d="M80 30v31l24 14" fill="none" stroke="white" stroke-width="7" stroke-linecap="round"/><path d="M25 114c18-24 34-30 53-18 21 13 38 7 57-17" fill="none" stroke="#edbd67" stroke-width="8" stroke-linecap="round"/><circle cx="27" cy="114" r="8" fill="#edbd67"/><circle cx="136" cy="79" r="8" fill="#edbd67"/></svg>
+          </div>
+          <div class="body"><p class="date">14 de març de 2024</p><h3 class="title">Sostenibilitat engega un projecte d'observatori ciutadà de papallones urbanes</h3><p class="summary">Malgrat s'incorpora a la xarxa uBMS amb un projecte de ciència ciutadana per seguir les papallones diürnes, entendre la biodiversitat urbana i implicar-hi escoles i voluntariat.</p><span class="more">Llegir la notícia <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M14 7l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+        </a>
+
+        <a class="card" href="https://www.revistacambrils.cat/noticia/32488/taller-museu-dhistoria" target="_blank" rel="noopener noreferrer" aria-label="Obrir la notícia de Revista Cambrils sobre la importància dels insectes i de les papallones">
+          <div class="preview three"><span class="source">Revista Cambrils</span>
+            <svg class="art" viewBox="0 0 160 130" aria-hidden="true"><rect x="18" y="19" width="124" height="82" rx="10" fill="#fff9e9" stroke="#0b2b44" stroke-width="5"/><path d="M36 78c18-31 35-39 51-28 16 10 29 5 48-18" fill="none" stroke="#4f936e" stroke-width="7" stroke-linecap="round"/><circle cx="43" cy="41" r="7" fill="#edbd67"/><circle cx="67" cy="41" r="7" fill="#4f936e"/><path d="M47 118v-13M80 118v-13M113 118v-13" stroke="#0b2b44" stroke-width="8" stroke-linecap="round"/><circle cx="47" cy="102" r="10" fill="#0b2b44"/><circle cx="80" cy="102" r="10" fill="#0b2b44"/><circle cx="113" cy="102" r="10" fill="#0b2b44"/></svg>
+          </div>
+          <div class="body"><p class="date">16 de maig de 2021</p><h3 class="title">La importància dels insectes i de les papallones: en només 15 anys s'han perdut el 45% de les papallones</h3><p class="summary">El taller «Balcons verds: la biodiversitat a casa teva», celebrat al Molí de les Tres Eres, mostra com jardins i balcons poden ajudar a protegir insectes i papallones.</p><span class="more">Llegir la notícia <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M14 7l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+        </a>
+      </div>
+    </section>
+
+    <footer><p>Exposició de notícies · Malgrat de Mar</p><p>Fotografia de fons: Alberto-g-rovi, <a href="https://commons.wikimedia.org/wiki/File:Playa_de_la_Conca-Malgrat_de_Mar.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons (CC BY 3.0)</a>.</p></footer>
+  </main>
+</body>
+</html>
