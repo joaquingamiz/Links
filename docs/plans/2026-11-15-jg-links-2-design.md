@@ -15,8 +15,10 @@ Replace the existing link list with a mobile-first personal hub that feels consi
 
 The page is organized by visitor intent: identity, a fast starting point, owned projects, learning resources, social content, and collaboration. The hero copy is:
 
-> I'm JG. 🛡️  
-> Everyone wants to be a hacker. Who's going to stop them?  
+> I'm JG. 🛡️
+>
+> Everyone wants to be a hacker. Who's going to stop them?
+>
 > Welcome to the Blue Team side of cybersecurity. 🔵
 
 The supporting role line is `Cybersecurity Architect · Blue Team · Cloud Security · MVP`.
