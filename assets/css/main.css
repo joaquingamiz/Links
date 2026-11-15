@@ -151,8 +151,15 @@ p {
   width: 2.55rem;
   height: 2.55rem;
   border-radius: 0.78rem;
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
+  overflow: hidden;
+  padding: 0.28rem;
+  background: #030407;
+}
+
+.brand-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .brand-copy {
@@ -222,29 +229,7 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 8% 34%;
-  transform: scale(2.35);
-  transform-origin: 8% 34%;
-}
-
-.portrait-badge {
-  position: absolute;
-  right: 0.45rem;
-  bottom: 0.45rem;
-  display: none;
-  align-items: center;
-  gap: 0.35rem;
-  padding: 0.3rem 0.5rem;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: rgba(5, 11, 27, 0.78);
-  font-size: 0.64rem;
-  font-weight: 800;
-  backdrop-filter: blur(0.7rem);
-}
-
-.portrait-badge span {
-  color: var(--cyan);
+  object-position: center;
 }
 
 .eyebrow,
@@ -388,6 +373,26 @@ p {
   transition: transform 260ms ease;
 }
 
+.featured-media-logo {
+  display: grid;
+  place-items: center;
+  padding: 1.6rem;
+  background:
+    radial-gradient(circle at 50% 30%, rgba(37, 208, 255, 0.11), transparent 50%),
+    #030407;
+}
+
+.featured-media-logo img {
+  width: min(48%, 7rem);
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0.75rem 1.5rem rgba(37, 208, 255, 0.14));
+}
+
+.featured-card:hover .featured-media-logo img {
+  transform: scale(1.04);
+}
+
 .featured-card:hover .featured-media img {
   transform: scale(1.025);
 }
@@ -515,6 +520,16 @@ p {
   font-size: 0.62rem;
 }
 
+.link-icon svg {
+  width: 1.05rem;
+  height: 1.05rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .directory-copy {
   display: grid;
   min-width: 0;
@@ -612,10 +627,6 @@ p {
     width: 9rem;
   }
 
-  .portrait-badge {
-    display: inline-flex;
-  }
-
   .section-heading > p {
     display: block;
   }
@@ -667,12 +678,6 @@ p {
 
   .cover-portrait {
     width: 13.5rem;
-    aspect-ratio: 4 / 5;
-  }
-
-  .cover-portrait img {
-    object-position: 8% 38%;
-    transform-origin: 8% 38%;
   }
 
   .cover-claim {
