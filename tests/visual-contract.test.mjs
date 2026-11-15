@@ -25,6 +25,10 @@ test("the visual system uses the Web-JG palette and accessibility contracts", as
   assert.match(css, /@media\s*\(min-width:\s*48rem\)/);
 });
 
+test("the brand link keeps its visible text in the accessible name", () => {
+  assert.doesNotMatch(html, /class="brand"[^>]*aria-label=/);
+});
+
 test("the page renders all content without runtime JavaScript", async () => {
   const css = await readFile(new URL("assets/css/main.css", root), "utf8");
   assert.doesNotMatch(html, /<script\s+src=/);
