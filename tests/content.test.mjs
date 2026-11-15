@@ -46,7 +46,7 @@ test("destinations are secure public URLs or the approved contact address", () =
 
 test("local image paths remain relative and work below /Links/", () => {
   for (const link of links.filter((item) => item.image)) {
-    assert.match(link.image, /^assets\/images\/[a-z0-9-]+\.webp$/);
+    assert.match(link.image, /^assets\/images\/[a-z0-9-]+\.(?:webp|png|jpeg)$/);
     assert.ok(!link.image.startsWith("/"), link.id);
   }
 });
@@ -61,7 +61,7 @@ test("ordering is deterministic within each category", () => {
 });
 
 test("visible links use the compact cover categories", () => {
-  const categories = new Set(["featured", "learn", "projects", "content", "connect"]);
+  const categories = new Set(["featured", "projects", "content", "training", "connect"]);
   for (const link of links.filter((item) => item.visible)) {
     assert.ok(categories.has(link.category), `${link.id}: ${link.category}`);
   }
@@ -70,6 +70,6 @@ test("visible links use the compact cover categories", () => {
 test("the cover has exactly three featured destinations", () => {
   assert.deepEqual(
     links.filter((link) => link.visible && link.category === "featured").map((link) => link.id),
-    ["cyberquiz-start", "cyber-age-wars", "blue-team-ebook"]
+    ["official-web", "cyber-age-wars", "cyberquiz-start"]
   );
 });
