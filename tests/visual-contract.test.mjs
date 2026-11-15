@@ -25,8 +25,8 @@ test("the visual system uses the Web-JG palette and accessibility contracts", as
   assert.match(css, /@media\s*\(min-width:\s*48rem\)/);
 });
 
-test("progressive enhancement does not send analytics or mutate link destinations", async () => {
-  const script = await readFile(new URL("assets/js/main.js", root), "utf8");
-  assert.match(script, /IntersectionObserver/);
-  assert.doesNotMatch(script, /fetch\(|XMLHttpRequest|sendBeacon|localStorage|sessionStorage/);
+test("the page renders all content without runtime JavaScript", async () => {
+  const css = await readFile(new URL("assets/css/main.css", root), "utf8");
+  assert.doesNotMatch(html, /<script\s+src=/);
+  assert.doesNotMatch(css, /\[data-reveal\][^{]*\{[^}]*opacity:\s*0/s);
 });

@@ -6,6 +6,8 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "test": "node --test",
-    "check": "npm run build -- --check && npm test"
+    "check:generated": "node scripts/build.mjs --check",
+    "check:internal": "node scripts/check-internal-links.mjs",
+    "check": "npm run check:generated && npm test && npm run check:internal"
   }
 }

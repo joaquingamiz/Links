@@ -72,7 +72,7 @@ function renderResource(link) {
 
 function renderProject(link) {
   if (!link.image) {
-    return `<a class="section-link" href="${escapeHtml(link.url)}"${externalAttributes(link.url)} data-link-id="${escapeHtml(link.id)}>${escapeHtml(link.name)} <span aria-hidden="true">→</span></a>`;
+    return `<a class="section-link" href="${escapeHtml(link.url)}"${externalAttributes(link.url)} data-link-id="${escapeHtml(link.id)}">${escapeHtml(link.name)} <span aria-hidden="true">→</span></a>`;
   }
   return `<article class="project-card">
     <a href="${escapeHtml(link.url)}"${externalAttributes(link.url)} data-link-id="${escapeHtml(link.id)}">
@@ -84,7 +84,7 @@ function renderProject(link) {
 
 function renderLearn(link) {
   return `<article class="learn-card${link.featured ? " is-featured" : ""}">
-    <a href="${escapeHtml(link.url)}"${externalAttributes(link.url)} data-link-id="${escapeHtml(link.id)}>
+    <a href="${escapeHtml(link.url)}"${externalAttributes(link.url)} data-link-id="${escapeHtml(link.id)}">
       <span class="card-topline">${iconMarkup(link.icon)}${labelMarkup(link.label)}</span>
       <strong>${escapeHtml(link.name)}</strong>
       <span>${escapeHtml(link.description)}</span>
@@ -94,7 +94,7 @@ function renderLearn(link) {
 }
 
 function renderCollaboration(link) {
-  return `<a class="collab-link${link.featured ? " is-featured" : ""}" href="${escapeHtml(link.url)}"${externalAttributes(link.url)} data-link-id="${escapeHtml(link.id)}>
+  return `<a class="collab-link${link.featured ? " is-featured" : ""}" href="${escapeHtml(link.url)}"${externalAttributes(link.url)} data-link-id="${escapeHtml(link.id)}">
     ${iconMarkup(link.icon)}
     <span><strong>${escapeHtml(link.name)}</strong><small>${escapeHtml(link.description)}</small></span>
     <span class="link-arrow" aria-hidden="true">↗</span>

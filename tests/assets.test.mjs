@@ -5,7 +5,8 @@ import test from "node:test";
 const assets = [
   ["joaquin.webp", 120_000],
   ["cyberquiz.webp", 200_000],
-  ["cyber-age-wars.webp", 220_000]
+  ["cyber-age-wars.webp", 220_000],
+  ["og-jg.webp", 250_000]
 ];
 
 for (const [filename, maximumBytes] of assets) {

@@ -37,3 +37,11 @@ test("renderPage produces complete static content", () => {
   assert.doesNotMatch(html, /src="\//);
   assert.doesNotMatch(html, /href="\/assets/);
 });
+
+test("every generated tracking id is a complete quoted attribute", () => {
+  const html = renderPage(template, links);
+  assert.doesNotMatch(html, /data-link-id="[^"]+>/);
+  for (const link of links.filter((item) => item.visible && item.category !== "primary")) {
+    assert.ok(html.includes(`data-link-id="${link.id}"`), link.id);
+  }
+});
