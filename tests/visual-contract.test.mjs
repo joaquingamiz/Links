@@ -7,11 +7,15 @@ const html = await readFile(new URL("index.html", root), "utf8");
 
 test("the generated page preserves the approved hero and semantic structure", () => {
   assert.match(html, /I’m JG\./);
-  assert.match(html, /Everyone wants to be a hacker/);
+  assert.match(html, /Projects, resources and places where you can find me\./);
   assert.match(html, /Cybersecurity Architect <span>·<\/span> Blue Team <span>·<\/span> Cloud Security <span>·<\/span> MVP/);
   assert.match(html, /href="#main-content"/);
   assert.match(html, /<main id="main-content"/);
-  assert.match(html, /id="proyectos"/);
+  assert.match(html, /id="featured"/);
+  assert.match(html, /id="all-links"/);
+  assert.match(html, /Featured links/);
+  assert.match(html, /All links/);
+  assert.doesNotMatch(html, /Tres buenos primeros pasos|Ideas que acabaron funcionando|Formación con los pies en la tierra|Nos vemos por internet|Construyamos algo útil/);
   assert.doesNotMatch(html, /formspree|<iframe|fonts\.googleapis|font-awesome/i);
 });
 
@@ -23,6 +27,13 @@ test("the visual system uses the Web-JG palette and accessibility contracts", as
   assert.match(css, /:focus-visible/);
   assert.match(css, /prefers-reduced-motion:\s*reduce/);
   assert.match(css, /@media\s*\(min-width:\s*48rem\)/);
+});
+
+test("the visual system stays compact and responsive", async () => {
+  const css = await readFile(new URL("assets/css/main.css", root), "utf8");
+  assert.match(css, /--shell:\s*60rem/);
+  assert.match(css, /\.library-grid\s*\{[^}]*grid-template-columns:\s*1fr/s);
+  assert.match(css, /@media\s*\(min-width:\s*48rem\)[\s\S]*\.library-grid\s*\{[^}]*grid-template-columns:\s*repeat\(2,\s*minmax\(0,\s*1fr\)\)/);
 });
 
 test("the brand link keeps its visible text in the accessible name", () => {
