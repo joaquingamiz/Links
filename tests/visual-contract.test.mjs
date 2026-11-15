@@ -7,11 +7,15 @@ const html = await readFile(new URL("index.html", root), "utf8");
 
 test("the generated page preserves the approved hero and semantic structure", () => {
   assert.match(html, /I’m JG\./);
-  assert.match(html, /Everyone wants to be a hacker/);
+  assert.match(html, /Projects, resources and places where you can find me\./);
   assert.match(html, /Cybersecurity Architect <span>·<\/span> Blue Team <span>·<\/span> Cloud Security <span>·<\/span> MVP/);
   assert.match(html, /href="#main-content"/);
   assert.match(html, /<main id="main-content"/);
-  assert.match(html, /id="proyectos"/);
+  assert.match(html, /id="featured"/);
+  assert.match(html, /id="all-links"/);
+  assert.match(html, /Featured links/);
+  assert.match(html, /All links/);
+  assert.doesNotMatch(html, /Tres buenos primeros pasos|Ideas que acabaron funcionando|Formación con los pies en la tierra|Nos vemos por internet|Construyamos algo útil/);
   assert.doesNotMatch(html, /formspree|<iframe|fonts\.googleapis|font-awesome/i);
 });
 

@@ -59,3 +59,17 @@ test("ordering is deterministic within each category", () => {
     seen.add(key);
   }
 });
+
+test("visible links use the compact cover categories", () => {
+  const categories = new Set(["featured", "learn", "projects", "content", "connect"]);
+  for (const link of links.filter((item) => item.visible)) {
+    assert.ok(categories.has(link.category), `${link.id}: ${link.category}`);
+  }
+});
+
+test("the cover has exactly three featured destinations", () => {
+  assert.deepEqual(
+    links.filter((link) => link.visible && link.category === "featured").map((link) => link.id),
+    ["cyberquiz-start", "cyber-age-wars", "blue-team-ebook"]
+  );
+});
