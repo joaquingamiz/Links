@@ -15,6 +15,8 @@ test("the generated page preserves the approved hero and semantic structure", ()
   assert.match(html, /id="all-links"/);
   assert.match(html, /assets\/images\/jg-logo\.png/);
   assert.match(html, /assets\/images\/joaquin-linkedin\.jpeg/);
+  assert.match(html, /assets\/images\/og-jg\.png/);
+  assert.doesNotMatch(html, /assets\/images\/og-jg\.webp/);
   assert.match(html, /Personal link hub/);
   assert.match(html, /Featured links/);
   assert.match(html, /All links/);

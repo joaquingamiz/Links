@@ -7,7 +7,7 @@ const assets = [
   ["jg-logo.png", 60_000],
   ["cyberquiz.webp", 200_000],
   ["cyber-age-wars.webp", 220_000],
-  ["og-jg.webp", 250_000]
+  ["og-jg.png", 500_000]
 ];
 
 for (const [filename, maximumBytes] of assets) {

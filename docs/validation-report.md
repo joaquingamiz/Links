@@ -33,11 +33,11 @@ Validation date: 2026-11-15
 - The supplied square portrait renders without an aggressive crop, and the JG shield is used in the header, favicon and Official Website card.
 - The cover, ordered featured links, four directory groups, related SVG icons and social row render without runtime JavaScript.
 - Document language and all interface copy are English; Spanish destination slugs and the `Un Podcast Seguro` brand name remain unchanged.
-- Full-page height: 2,028 px at 1440 × 1000 and 3,270 px at 390 × 844.
+- Full-page responsive captures were reviewed at 1440 px desktop width and the iPhone 13 profile.
 - Static assets use relative paths compatible with GitHub Pages under `/Links/`.
 - No insecure asset or mixed-content request is present in the generated markup.
 
-## Lighthouse (local production-equivalent static build)
+## Lighthouse baseline
 
 | Category | Score |
 | --- | ---: |
@@ -46,14 +46,14 @@ Validation date: 2026-11-15
 | Best Practices | 100 |
 | SEO | 100 |
 
-Key metrics: FCP 0.8 s, LCP 2.4 s, TBT 0 ms, CLS 0. The label/content-name mismatch audit reports no affected elements.
+Latest baseline from the preceding production-equivalent static build: FCP 0.8 s, LCP 2.4 s, TBT 0 ms, CLS 0. A fresh public run remains part of the post-merge checks below.
 
 ## Visual evidence
 
 - `docs/screenshots/before-desktop.webp`
 - `docs/screenshots/before-mobile.webp`
-- `docs/screenshots/after-desktop.webp`
-- `docs/screenshots/after-mobile.webp`
+- `docs/screenshots/after-desktop.png`
+- `docs/screenshots/after-mobile.png`
 
 ## Post-merge checks
 

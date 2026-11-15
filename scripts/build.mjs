@@ -56,7 +56,7 @@ function labelMarkup(label) {
 
 function renderFeatured(link) {
   const media = link.image
-    ? `<span class="featured-media${link.id === "official-web" ? " featured-media-logo" : ""}"><img src="${escapeHtml(link.image)}" alt="${escapeHtml(link.name)} preview" width="1200" height="750" loading="lazy" decoding="async"></span>`
+    ? `<span class="featured-media${link.id === "official-web" ? " featured-media-logo" : ""}"><img src="${escapeHtml(link.image)}" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>`
     : `<span class="featured-media featured-media-symbol">${iconMarkup(link.icon)}<span>JG Links</span></span>`;
 
   return `<article class="featured-card${link.image ? "" : " featured-card-no-image"}">
