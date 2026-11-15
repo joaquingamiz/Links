@@ -29,6 +29,13 @@ test("the visual system uses the Web-JG palette and accessibility contracts", as
   assert.match(css, /@media\s*\(min-width:\s*48rem\)/);
 });
 
+test("the visual system stays compact and responsive", async () => {
+  const css = await readFile(new URL("assets/css/main.css", root), "utf8");
+  assert.match(css, /--shell:\s*60rem/);
+  assert.match(css, /\.library-grid\s*\{[^}]*grid-template-columns:\s*1fr/s);
+  assert.match(css, /@media\s*\(min-width:\s*48rem\)[\s\S]*\.library-grid\s*\{[^}]*grid-template-columns:\s*repeat\(2,\s*minmax\(0,\s*1fr\)\)/);
+});
+
 test("the brand link keeps its visible text in the accessible name", () => {
   assert.doesNotMatch(html, /class="brand"[^>]*aria-label=/);
 });
