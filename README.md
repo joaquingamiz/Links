@@ -1,10 +1,10 @@
 # JG Links
 
-Personal projects, resources, and content hub for Joaquín Gamiz. The site is served by GitHub Pages at [joaquingamiz.github.io/Links](https://joaquingamiz.github.io/Links/).
+Compact English link cover for Joaquín Gamiz. It highlights three destinations and organizes the remaining projects, learning resources, content and contact links in one fast directory. The site is served by GitHub Pages at [joaquingamiz.github.io/Links](https://joaquingamiz.github.io/Links/).
 
 ## Architecture
 
-The site has no runtime framework or external dependency. `content/links.json` is the source of truth for managed destinations. `scripts/build.mjs` combines that content with `src/index.template.html` and commits the resulting `index.html` for GitHub Pages.
+The site has no runtime framework or external dependency. `content/links.json` is the source of truth for managed destinations. `scripts/build.mjs` combines that content with `src/index.template.html` and commits the resulting `index.html` for GitHub Pages. Visible entries use the `featured`, `learn`, `projects`, `content`, and `connect` categories.
 
 ## Update a link
 
