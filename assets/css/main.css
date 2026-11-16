@@ -31,10 +31,14 @@ h1 { margin: 0; font-size: clamp(38px, 7vw, 52px); line-height: 1.1; letter-spac
 .primary-copy { display: grid; gap: 3px; }
 .primary-copy strong { font-size: 20px; letter-spacing: -.025em; }
 .primary-copy > span { color: #4f5870; font-size: 13px; }
-.primary-icon { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 14px; background: #4278ff; color: white; }
+.primary-icon { display: grid; place-items: center; width: 48px; height: 48px; flex: 0 0 auto; border-radius: 14px; background: #090b10; color: white; }
 .primary-arrow { margin-left: auto; color: #3261df; font-size: 27px; }
 .link-icon { display: inline-grid; place-items: center; }
-.link-icon svg { width: 23px; height: 23px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.link-icon img { width: 23px; height: 23px; object-fit: contain; transition: transform 180ms ease; }
+.primary-icon img { width: 34px; height: 34px; }
+.project-top .link-icon { width: 42px; height: 42px; border-radius: 10px; background: #0b0c0f80; }
+.project-top img { width: 34px; height: 34px; }
+.project-card:hover .link-icon img { transform: scale(1.08); }
 .projects { margin-top: 32px; }
 .section-heading { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
 .section-heading h2 { margin: 0; font-size: 14px; font-weight: 650; }
@@ -50,8 +54,15 @@ h1 { margin: 0; font-size: clamp(38px, 7vw, 52px); line-height: 1.1; letter-spac
 .project-card strong { font-size: 17px; letter-spacing: -.025em; }
 .project-description { margin-top: 5px; font-size: 12px; color: var(--muted); }
 .social-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px; padding-block: 32px; }
-.social-pill { display: grid; place-items: center; width: 44px; height: 44px; color: #bdbec7; border: 1px solid var(--line); border-radius: 50%; transition: color 150ms ease, background 150ms ease; }
-.social-pill:hover { background: #292b35; color: white; }
+.social-pill { --brand-color: #bdbec7; display: grid; place-items: center; width: 46px; height: 46px; background: #14151b; border: 1px solid color-mix(in srgb, var(--brand-color) 40%, #292b35); border-radius: 14px; transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease; }
+.social-pill:hover { transform: translateY(-3px); border-color: var(--brand-color); box-shadow: 0 5px 18px color-mix(in srgb, var(--brand-color) 20%, transparent); }
+.social-pill[data-link-id="linkedin"] { --brand-color: #0a66c2; background: #0a66c218; }
+.social-pill[data-link-id="github"] { --brand-color: #fff; }
+.social-pill[data-link-id="youtube"] { --brand-color: #ff0033; background: #ff003310; }
+.social-pill[data-link-id="instagram"] { --brand-color: #e1306c; background: linear-gradient(140deg, #833ab420, #f5604015); }
+.social-pill[data-link-id="tiktok"] { --brand-color: #25f4ee; }
+.icon-tiktok img { filter: drop-shadow(-1px -1px 0 #25f4ee) drop-shadow(1px 1px 0 #fe2c55); }
+.social-pill[data-link-id="contact"] { --brand-color: #b29aff; background: #6d4aff18; }
 .social-pill > span:not(.link-icon) { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
 .site-footer { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); padding-block: 20px 30px; color: var(--muted); font-size: 11px; }
 .site-footer p { margin: 0; }
@@ -72,6 +83,8 @@ h1 { margin: 0; font-size: clamp(38px, 7vw, 52px); line-height: 1.1; letter-spac
   .project-grid { grid-template-columns: 1fr; gap: 10px; }
   .project-card { display: grid; grid-template-columns: 34px 1fr; column-gap: 14px; padding: 17px 20px; min-height: 94px; border-top: 1px solid var(--line); border-left: 3px solid var(--accent); }
   .project-top { grid-row: span 2; margin: 0; align-self: center; }
+  .project-top .link-icon { width: 34px; height: 38px; }
+  .project-top img { width: 30px; height: 30px; }
   .project-top > span:last-child { display: none; }
   .project-card strong { align-self: end; font-size: 16px; }
   .project-description { font-size: 12px; margin-top: 2px; }

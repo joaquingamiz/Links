@@ -17,6 +17,8 @@ Date: 2026-11-16
 - Desktop shows a three-column project grid. Mobile shows three compact rows.
 - All visible social links have accessible names. Keyboard focus and reduced-motion support remain present.
 - JG Labs responds HTTPS HTTP 200.
+- Brand logos replace generic link icons: project artwork comes from the project sites, and social glyphs from Simple Icons. Sources and licensing are recorded in `assets/icons/SOURCES.md`.
+- Colored social buttons and project logos were reviewed in the updated desktop/mobile captures; all artwork is served locally.
 - No runtime script, external font, iframe or insecure asset URL.
 - Current visual evidence: `docs/screenshots/after-desktop.png` and `docs/screenshots/after-mobile.png`.
 
