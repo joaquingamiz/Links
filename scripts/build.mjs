@@ -1,8 +1,12 @@
 import { readFile, writeFile } from "node:fs/promises";
+import { createHash } from "node:crypto";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+const stylesheetVersion = createHash("sha256")
+  .update(await readFile(resolve(root, "assets/css/main.css")))
+  .digest("hex").slice(0, 12);
 
 export function escapeHtml(value) {
   return String(value)
@@ -72,7 +76,7 @@ export function renderPage(template, links) {
   };
   return Object.entries(replacements).reduce(
     (html, [token, value]) => html.replaceAll(token, value),
-    template
+    template.replaceAll('href="assets/css/main.css"', `href="assets/css/main.css?v=${stylesheetVersion}"`)
   );
 }
 

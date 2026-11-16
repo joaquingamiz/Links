@@ -17,15 +17,16 @@ img { display: block; max-width: 100%; }
 .shell { width: min(calc(100% - 40px), 800px); margin-inline: auto; }
 .skip-link { position: fixed; top: 12px; left: 12px; z-index: 10; padding: 12px 18px; background: white; color: black; border-radius: 8px; transform: translateY(-160%); }
 .skip-link:focus { transform: none; }
-.site-header { display: flex; align-items: center; justify-content: space-between; padding-block: 28px; }
+.site-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-block: 20px; }
 .brand { display: flex; align-items: center; gap: 10px; font-weight: 750; font-size: 14px; }
 .brand img { width: 34px; height: 34px; object-fit: contain; }
 .header-note { color: var(--muted); font-size: 12px; }
-.profile { display: flex; gap: 24px; align-items: center; padding-block: 34px 36px; }
-.portrait { width: 112px; height: 112px; object-fit: cover; border-radius: 50%; border: 3px solid #33343e; }
+.profile { display: flex; gap: 18px; align-items: center; padding-block: 18px 26px; }
+.profile > div { min-width: 0; }
+.portrait { width: 72px; height: 72px; flex: 0 0 72px; aspect-ratio: 1; object-fit: cover; border-radius: 50%; border: 2px solid #33343e; }
 .eyebrow { margin: 0 0 4px; color: var(--muted); font-size: 13px; }
-h1 { margin: 0; font-size: clamp(38px, 7vw, 52px); line-height: 1.1; letter-spacing: -.055em; }
-.roles { color: var(--muted); margin: 12px 0 0; max-width: 430px; font-size: 13px; }
+h1 { margin: 0; font-size: clamp(32px, 6vw, 40px); line-height: 1.1; letter-spacing: -.055em; }
+.roles { color: var(--muted); margin: 8px 0 0; max-width: 430px; font-size: 13px; }
 .primary-link { display: flex; align-items: center; gap: 18px; padding: 25px 28px; border-radius: 18px; background: #f4f5f8; color: #101420; border: 1px solid white; box-shadow: 0 12px 40px #0003; transition: transform 180ms ease, box-shadow 180ms ease; }
 .primary-link:hover { transform: translateY(-3px); box-shadow: 0 12px 40px #4278ff28; }
 .primary-copy { display: grid; gap: 3px; }
@@ -49,7 +50,7 @@ h1 { margin: 0; font-size: clamp(38px, 7vw, 52px); line-height: 1.1; letter-spac
 .project-cyber-age-wars { --accent: #efbb66; background: linear-gradient(150deg, #2c2318, #181819 70%); }
 .project-cyberquiz-start { --accent: #b6a0ff; background: linear-gradient(150deg, #262036, #19181e 70%); }
 .project-jg-labs { --accent: #71dbea; background: linear-gradient(150deg, #172b2e, #171b1e 70%); }
-.project-top { display: flex; align-items: center; justify-content: space-between; color: var(--accent); margin-bottom: 30px; }
+.project-top { display: flex; align-items: center; justify-content: space-between; color: var(--accent); margin-bottom: 22px; }
 .project-top > span:last-child { font-size: 18px; }
 .project-card strong { font-size: 17px; letter-spacing: -.025em; }
 .project-description { margin-top: 5px; font-size: 12px; color: var(--muted); }
@@ -72,11 +73,11 @@ h1 { margin: 0; font-size: clamp(38px, 7vw, 52px); line-height: 1.1; letter-spac
 .utility-page { padding-block: 80px; max-width: 640px; }
 .utility-page > p { color: var(--muted); margin-block: 24px; }
 .utility-page > p a { text-decoration: underline; text-underline-offset: 4px; }
-@media (max-width: 560px) {
+@media (max-width: 680px) {
   .site-header { padding-block: 20px; }
   .header-note { font-size: 10px; }
-  .profile { gap: 18px; padding-block: 20px 28px; }
-  .portrait { width: 82px; height: 82px; flex: 0 0 auto; }
+  .profile { gap: 14px; padding-block: 12px 22px; }
+  .portrait { width: 56px; height: 56px; flex-basis: 56px; }
   .roles { font-size: 11px; margin-top: 8px; }
   .primary-link { padding: 20px; gap: 14px; }
   .primary-copy strong { font-size: 18px; }

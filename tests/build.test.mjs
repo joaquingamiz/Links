@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
 
@@ -17,6 +18,12 @@ test("escapeHtml protects generated markup", () => {
     escapeHtml(`<script>alert("x")</script>`),
     "&lt;script&gt;alert(&quot;x&quot;)&lt;/script&gt;"
   );
+});
+
+test("the generated stylesheet URL follows CSS content to invalidate stale caches", async () => {
+  const css = await readFile(new URL("../assets/css/main.css", import.meta.url));
+  const version = createHash("sha256").update(css).digest("hex").slice(0, 12);
+  assert.ok(renderPage(template, links).includes('href="assets/css/main.css?v=' + version + '"'));
 });
 
 test("visibleLinks excludes hidden entries and sorts deterministically", () => {
