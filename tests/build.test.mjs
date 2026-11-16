@@ -33,20 +33,18 @@ test("renderPage produces complete static content", () => {
   assert.ok(!html.includes("{{"));
   assert.match(html, /Cyber Age Wars/);
   assert.match(html, /Official Website/);
-  assert.match(html, /All Training/);
+  assert.match(html, /JG Labs/);
   assert.doesNotMatch(html, /Blue Team from Zero/);
   assert.match(html, /rel="noopener noreferrer"/);
   assert.doesNotMatch(html, /src="\//);
   assert.doesNotMatch(html, /href="\/assets/);
 });
 
-test("renderPage builds a compact cover and grouped link library", () => {
+test("renderPage shows only the approved destinations", () => {
   const html = renderPage(template, links);
-  assert.equal((html.match(/class="featured-card/g) ?? []).length, 3);
-  for (const group of ["projects", "content", "training", "connect"]) {
-    assert.match(html, new RegExp(`data-link-group="${group}"`));
-  }
-  assert.doesNotMatch(html, /resource-grid|projects-grid|learn-grid|collab-panel/);
+  const ids = [...html.matchAll(/data-link-id="([^"]+)"/g)].map(match => match[1]);
+  assert.deepEqual(ids, ["official-web", "cyber-age-wars", "cyberquiz-start", "jg-labs", "linkedin", "github", "youtube", "instagram", "tiktok", "contact"]);
+  assert.doesNotMatch(html, /data-link-group=|All links|Featured links|Directory/);
 });
 
 test("featured links keep the approved order", () => {

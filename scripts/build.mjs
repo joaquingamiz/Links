@@ -3,7 +3,6 @@ import { dirname, resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const footerSocialIds = new Set(["linkedin", "github", "instagram", "tiktok"]);
 
 export function escapeHtml(value) {
   return String(value)
@@ -29,6 +28,7 @@ function externalAttributes(url) {
 function iconMarkup(icon) {
   const icons = {
     arrow: '<path d="M7 17 17 7M8 7h9v9"/>',
+    flask: '<path d="M9 3h6M10 3v7l-6 9a1.3 1.3 0 0 0 1 2h14a1.3 1.3 0 0 0 1-2l-6-9V3M8 15h8"/>',
     book: '<path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v16H6.5A2.5 2.5 0 0 0 4 21.5v-16ZM20 5.5A2.5 2.5 0 0 0 17.5 3H13v16h4.5a2.5 2.5 0 0 1 2.5 2.5v-16Z"/>',
     briefcase: '<path d="M9 7V5h6v2M4 7h16v12H4zM4 12h16M10 12v2h4v-2"/>',
     checklist: '<path d="m4 6 1.5 1.5L8 5M11 6h9M4 12l1.5 1.5L8 11M11 12h9M4 18l1.5 1.5L8 17M11 18h9"/>',
@@ -50,38 +50,16 @@ function iconMarkup(icon) {
   return `<span class="link-icon icon-${escapeHtml(icon)}" aria-hidden="true"><svg viewBox="0 0 24 24">${drawing}</svg></span>`;
 }
 
-function labelMarkup(label) {
-  return label ? `<span class="card-label">${escapeHtml(label)}</span>` : "";
-}
-
-function renderFeatured(link) {
-  const media = link.image
-    ? `<span class="featured-media${link.id === "official-web" ? " featured-media-logo" : ""}"><img src="${escapeHtml(link.image)}" alt="" width="1200" height="750" loading="lazy" decoding="async"></span>`
-    : `<span class="featured-media featured-media-symbol">${iconMarkup(link.icon)}<span>JG Links</span></span>`;
-
-  return `<article class="featured-card${link.image ? "" : " featured-card-no-image"}">
-    <a href="${escapeHtml(link.url)}"${externalAttributes(link.url)} data-link-id="${escapeHtml(link.id)}">
-      ${media}
-      <span class="featured-copy">
-        ${labelMarkup(link.label)}
-        <strong>${escapeHtml(link.name)}</strong>
-        <span>${escapeHtml(link.description)}</span>
-        <span class="card-action">Open <span aria-hidden="true">↗</span></span>
-      </span>
-    </a>
-  </article>`;
-}
-
-function renderDirectoryLink(link) {
-  return `<a class="directory-link" href="${escapeHtml(link.url)}"${externalAttributes(link.url)} data-link-id="${escapeHtml(link.id)}">
-    ${iconMarkup(link.icon)}
-    <span class="directory-copy"><strong>${escapeHtml(link.name)}</strong><small>${escapeHtml(link.description)}</small></span>
-    <span class="link-arrow" aria-hidden="true">↗</span>
+function renderProject(link) {
+  return `<a class="project-card project-${escapeHtml(link.id)}" href="${escapeHtml(link.url)}"${externalAttributes(link.url)} data-link-id="${escapeHtml(link.id)}">
+    <span class="project-top">${iconMarkup(link.icon)}<span aria-hidden="true">↗</span></span>
+    <strong>${escapeHtml(link.name)}</strong>
+    <span class="project-description">${escapeHtml(link.description)}</span>
   </a>`;
 }
 
 function renderSocial(link) {
-  return `<a class="social-pill" href="${escapeHtml(link.url)}"${externalAttributes(link.url)} data-link-id="${escapeHtml(link.id)}">
+  return `<a class="social-pill" href="${escapeHtml(link.url)}"${externalAttributes(link.url)} data-link-id="${escapeHtml(link.id)}" aria-label="${escapeHtml(link.name)}" title="${escapeHtml(link.name)}">
     ${iconMarkup(link.icon)}
     <span>${escapeHtml(link.name)}</span>
   </a>`;
@@ -92,14 +70,11 @@ function byCategory(links, category) {
 }
 
 export function renderPage(template, links) {
-  const connectLinks = byCategory(links, "connect");
+  const primary = byCategory(links, "primary")[0];
   const replacements = {
-    "{{FEATURED_LINKS}}": byCategory(links, "featured").map(renderFeatured).join("\n"),
-    "{{PROJECT_LINKS}}": byCategory(links, "projects").map(renderDirectoryLink).join("\n"),
-    "{{CONTENT_LINKS}}": byCategory(links, "content").map(renderDirectoryLink).join("\n"),
-    "{{TRAINING_LINKS}}": byCategory(links, "training").map(renderDirectoryLink).join("\n"),
-    "{{CONNECT_LINKS}}": connectLinks.filter((link) => !footerSocialIds.has(link.id)).map(renderDirectoryLink).join("\n"),
-    "{{SOCIAL_LINKS}}": connectLinks.filter((link) => footerSocialIds.has(link.id)).map(renderSocial).join("\n"),
+    "{{PRIMARY_LINK}}": primary ? `<a class="primary-link" href="${escapeHtml(primary.url)}"${externalAttributes(primary.url)} data-link-id="${escapeHtml(primary.id)}"><span class="primary-icon">${iconMarkup("globe")}</span><span class="primary-copy"><strong>${escapeHtml(primary.name)}</strong><span>${escapeHtml(primary.description)}</span></span><span class="primary-arrow" aria-hidden="true">↗</span></a>` : "",
+    "{{PROJECT_LINKS}}": byCategory(links, "projects").map(renderProject).join("\n"),
+    "{{SOCIAL_LINKS}}": byCategory(links, "social").map(renderSocial).join("\n"),
     "{{YEAR}}": String(new Date().getUTCFullYear())
   };
   return Object.entries(replacements).reduce(
