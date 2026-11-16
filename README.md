@@ -1,40 +1,19 @@
 # JG Links
 
-Compact English link cover for Joaquín Gamiz. It uses the JG identity and Joaquín’s current portrait, highlights three destinations in the approved order, and organizes projects, content, training and contact links in one fast directory. The site is served by GitHub Pages at [joaquingamiz.github.io/Links](https://joaquingamiz.github.io/Links/).
+A compact English link landing for Joaquín Gamiz, hosted at [joaquingamiz.github.io/Links](https://joaquingamiz.github.io/Links/).
 
-## Architecture
+The page contains a short personal introduction, a primary Official Website link, three projects (Cyber Age Wars, CyberQuiz and JG Labs), and social/contact icons. Charcoal surfaces, white typography and distinct project accents keep each destination easy to identify.
 
-The site has no runtime framework or external dependency. `content/links.json` is the source of truth for managed destinations. `scripts/build.mjs` combines that content with `src/index.template.html` and commits the resulting `index.html` for GitHub Pages. Visible entries use the `featured`, `projects`, `content`, `training`, and `connect` categories.
+## Updating destinations
 
-## Update a link
-
-1. Edit `content/links.json`.
-2. Run `npm run build`.
-3. Run `npm run check`.
-4. Review and commit both the content change and generated `index.html`.
-
-Each link has a stable ID, name, description, URL, category, order, icon, optional image, visibility state, featured state, and optional label. Set `visible` to `false` to remove a link from generated output without deleting its configuration.
+Edit `content/links.json`, run `npm run build`, then `npm run check`. Commit the generated `index.html` with its source changes. Visible entries use `primary`, `projects` or `social`; other destinations remain hidden for future reuse.
 
 ## Local preview
 
-```bash
-npm run build
-python3 -m http.server 4173
-```
+Run `python3 -m http.server 4173` and open `http://127.0.0.1:4173/`.
 
-Open `http://127.0.0.1:4173/`. Asset paths are relative so the same output works under the production `/Links/` path.
+## Deployment
 
-## Verification
+GitHub Pages serves `main` at `/`. Assets are relative for the existing `/Links/` URL. DNS, Cloudflare, custom domains and Web-JG remain outside this change.
 
-```bash
-npm test
-npm run check
-```
-
-The check suite verifies content integrity, generated-file freshness, accessibility/visual contracts, SEO/privacy requirements, image budgets, and internal resource paths.
-
-## Deployment boundary
-
-GitHub Pages continues to deploy from the existing repository and branch configuration. This project does not use a custom domain or `CNAME`, and its workflow must not change DNS, Cloudflare, or `Web-JG`.
-
-See [the validation report](docs/validation-report.md) and [rollback procedure](docs/rollback.md) for release evidence.
+See [validation](docs/validation-report.md) and [rollback](docs/rollback.md).
