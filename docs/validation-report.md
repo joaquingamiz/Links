@@ -12,7 +12,18 @@ Date: 2026-11-16
 
 ## Local validation
 
-- `npm run check`: 25 tests passed; generated HTML is current and all resources in the three HTML files resolve.
+### Compact profile correction
+
+- Portrait reduced from 112/82 px to 72 px desktop and 56 px mobile.
+- HTML dimensions are 72 × 72, verified even with the stylesheet blocked.
+- Header/profile spacing reduced; project rows extend to 680 px to prevent cramped intermediate layouts.
+- Main stylesheet URL includes a content hash so browser caches fetch updated CSS after changes.
+- Firefox, Chromium and WebKit: passed at 320, 375, 390, 430, 560, 680, 768, 1024 and 1440 px.
+- No horizontal overflow, profile/link overlaps, clipped project text, broken images, page errors or HTTP resource errors in those checks.
+- Keyboard skip link verified with Tab (Firefox/Chromium) and Option-Tab (WebKit).
+- Updated desktop/mobile screenshots and Open Graph image reflect the compact profile.
+
+- `npm run check`: 26 tests passed; generated HTML is current and all resources in the three HTML files resolve.
 - Firefox screenshots reviewed at 1440 × 1000 and 390 × 844.
 - Desktop shows a three-column project grid. Mobile shows three compact rows.
 - All visible social links have accessible names. Keyboard focus and reduced-motion support remain present.
@@ -24,7 +35,7 @@ Date: 2026-11-16
 
 ## Configuration and release status
 
-- Repository implementation: complete on `codex/minimal-link-hub`.
+- Repository implementation: compact profile correction complete on `codex/compact-profile-fix`.
 - GitHub Pages URL and canonical: unchanged, `https://joaquingamiz.github.io/Links/`.
 - DNS / Cloudflare / Web-JG: unchanged.
 - Production release of this revision: pending PR integration and Pages deployment.
