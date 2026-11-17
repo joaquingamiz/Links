@@ -1,12 +1,12 @@
 # Validation report
 
-Date: 2026-11-16
+Date: 2026-11-17
 
 ## Approved structure
 
 - Short profile with the supplied portrait and shield.
 - Primary Official Website link.
-- Cyber Age Wars, CyberQuiz and JG Labs, in that order.
+- Cyber Age Wars, CyberQuiz, JG Labs and Un Podcast Seguro, in that order.
 - LinkedIn, GitHub, YouTube, Instagram, TikTok and email icons.
 - Minimal legal footer. No general directory or training section.
 
@@ -25,7 +25,8 @@ Date: 2026-11-16
 
 - `npm run check`: 26 tests passed; generated HTML is current and all resources in the three HTML files resolve.
 - Firefox screenshots reviewed at 1440 × 1000 and 390 × 844.
-- Desktop shows a three-column project grid. Mobile shows three compact rows.
+- Desktop shows a balanced two-column grid with four projects. Mobile shows four compact rows.
+- Un Podcast Seguro uses its existing YouTube playlist URL (HTTP 200), the YouTube brand logo and a coral accent.
 - All visible social links have accessible names. Keyboard focus and reduced-motion support remain present.
 - JG Labs responds HTTPS HTTP 200.
 - Brand logos replace generic link icons: project artwork comes from the project sites, and social glyphs from Simple Icons. Sources and licensing are recorded in `assets/icons/SOURCES.md`.
@@ -35,7 +36,7 @@ Date: 2026-11-16
 
 ## Configuration and release status
 
-- Repository implementation: compact profile correction complete on `codex/compact-profile-fix`.
+- Repository implementation: podcast addition complete on `codex/add-podcast-project`.
 - GitHub Pages URL and canonical: unchanged, `https://joaquingamiz.github.io/Links/`.
 - DNS / Cloudflare / Web-JG: unchanged.
 - Production release of this revision: pending PR integration and Pages deployment.

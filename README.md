@@ -2,7 +2,7 @@
 
 A compact English link landing for Joaquín Gamiz, hosted at [joaquingamiz.github.io/Links](https://joaquingamiz.github.io/Links/).
 
-The page contains a short personal introduction, a primary Official Website link, three projects (Cyber Age Wars, CyberQuiz and JG Labs), and social/contact icons. Charcoal surfaces, white typography and distinct project accents keep each destination easy to identify.
+The page contains a short personal introduction, a primary Official Website link, four projects (Cyber Age Wars, CyberQuiz, JG Labs and Un Podcast Seguro), and social/contact icons. Charcoal surfaces, white typography and distinct project accents keep each destination easy to identify.
 
 ## Updating destinations
 
