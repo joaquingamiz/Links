@@ -35,6 +35,7 @@ function iconMarkup(icon) {
     "cyber-age-wars": "assets/icons/cyber-age-wars.svg",
     "cyberquiz-start": "assets/images/cyberquiz-logo.png",
     "jg-labs": "assets/icons/jg-labs.svg",
+    podcast: "assets/icons/youtube.svg",
     linkedin: "assets/icons/linkedin.svg",
     github: "assets/icons/github.svg",
     youtube: "assets/icons/youtube.svg",

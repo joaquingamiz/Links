@@ -67,9 +67,9 @@ test("visible links use the compact cover categories", () => {
   }
 });
 
-test("the cover has exactly three projects", () => {
+test("the cover has the four approved projects in order", () => {
   assert.deepEqual(
-    links.filter((link) => link.visible && link.category === "projects").map((link) => link.id),
-    ["cyber-age-wars", "cyberquiz-start", "jg-labs"]
+    links.filter((link) => link.visible && link.category === "projects").sort((a, b) => a.order - b.order).map((link) => link.id),
+    ["cyber-age-wars", "cyberquiz-start", "jg-labs", "podcast"]
   );
 });

@@ -93,13 +93,13 @@
   {
     "id": "podcast",
     "name": "Un Podcast Seguro",
-    "description": "Conversations with people working on the real side of cybersecurity.",
+    "description": "Watch the cybersecurity podcast",
     "url": "https://www.youtube.com/playlist?list=PLnuadL3Xteo2BlcWFfbl7-BiimziNkFkS",
-    "category": "content",
-    "order": 3,
+    "category": "projects",
+    "order": 4,
     "icon": "podcast",
     "image": null,
-    "visible": false,
+    "visible": true,
     "featured": false,
     "label": null
   },

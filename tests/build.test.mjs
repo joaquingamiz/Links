@@ -50,7 +50,7 @@ test("renderPage produces complete static content", () => {
 test("renderPage shows only the approved destinations", () => {
   const html = renderPage(template, links);
   const ids = [...html.matchAll(/data-link-id="([^"]+)"/g)].map(match => match[1]);
-  assert.deepEqual(ids, ["official-web", "cyber-age-wars", "cyberquiz-start", "jg-labs", "linkedin", "github", "youtube", "instagram", "tiktok", "contact"]);
+  assert.deepEqual(ids, ["official-web", "cyber-age-wars", "cyberquiz-start", "jg-labs", "podcast", "linkedin", "github", "youtube", "instagram", "tiktok", "contact"]);
   assert.doesNotMatch(html, /data-link-group=|All links|Featured links|Directory/);
 });
 
